@@ -1,0 +1,32 @@
+disabled_rules:
+  - cyclomatic_complexity
+  - file_length
+  - function_body_length
+  - function_parameter_count
+  - line_length
+  - opening_brace
+  - type_body_length
+  - type_name
+  - variable_name
+  - vertical_whitespace
+
+opt_in_rules:
+  - closure_end_indentation
+  - closure_spacing
+  - empty_count
+  - force_unwrapping
+  - number_separator
+  - todo
+
+excluded:
+  - Pods
+
+empty_count: warning
+force_cast: warning
+large_tuple: 4
+number_separator:
+  minimum_length: 10000
+shorthand_operator: warning
+trailing_whitespace:
+  ignores_comments: true
+  ignores_empty_lines: true
