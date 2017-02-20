@@ -1,0 +1,15 @@
+PODS:
+  - GRMustache.swift (2.0.0)
+  - SwiftLint (0.16.1)
+
+DEPENDENCIES:
+  - GRMustache.swift
+  - SwiftLint
+
+SPEC CHECKSUMS:
+  GRMustache.swift: 8a547c12bea16052071b2b540af83d770075f0eb
+  SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
+
+PODFILE CHECKSUM: 0a1eb39f16728ad7d8fcd8f72354d5f647b4dce1
+
+COCOAPODS: 1.2.0
