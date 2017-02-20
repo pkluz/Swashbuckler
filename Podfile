@@ -9,4 +9,9 @@ inhibit_all_warnings!
 target 'Swashbuckler' do
     pod 'GRMustache.swift'
     pod 'SwiftLint'
+    pod 'FootlessParser', git: 'https://github.com/kareman/FootlessParser.git', branch: 'swift3.0'
+end
+
+target 'SwashbucklerTests' do
+    pod 'FootlessParser', git: 'https://github.com/kareman/FootlessParser.git', branch: 'swift3.0'
 end

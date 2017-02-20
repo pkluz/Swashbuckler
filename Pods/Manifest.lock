@@ -1,15 +1,28 @@
 PODS:
+  - FootlessParser (1.0)
   - GRMustache.swift (2.0.0)
   - SwiftLint (0.16.1)
 
 DEPENDENCIES:
+  - FootlessParser (from `https://github.com/kareman/FootlessParser.git`, branch `swift3.0`)
   - GRMustache.swift
   - SwiftLint
 
+EXTERNAL SOURCES:
+  FootlessParser:
+    :branch: swift3.0
+    :git: https://github.com/kareman/FootlessParser.git
+
+CHECKOUT OPTIONS:
+  FootlessParser:
+    :commit: 435955cbe5649abe9b543f0edd1f1c5e8d27bf35
+    :git: https://github.com/kareman/FootlessParser.git
+
 SPEC CHECKSUMS:
+  FootlessParser: c7610613da5865dd16ab7141ef1b067e7ed25dd6
   GRMustache.swift: 8a547c12bea16052071b2b540af83d770075f0eb
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
 
-PODFILE CHECKSUM: 0a1eb39f16728ad7d8fcd8f72354d5f647b4dce1
+PODFILE CHECKSUM: edada65bb1a6f8160c30c1c85981e9c8975a80ef
 
 COCOAPODS: 1.2.0

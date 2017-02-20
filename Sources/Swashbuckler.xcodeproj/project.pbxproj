@@ -7,127 +7,154 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F0D86A82D9506CC7306E268 /* Pods_Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C71940996D3FA137E67B899 /* Pods_Swashbuckler.framework */; };
-		F9433BBF1E5AAF060078E18F /* Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9433BB51E5AAF060078E18F /* Swashbuckler.framework */; };
-		F9433BDE1E5AAFBA0078E18F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9433BD41E5AAF420078E18F /* Tests.swift */; };
-		F9433BDF1E5AB0A50078E18F /* Swashbuckler.h in Headers */ = {isa = PBXBuildFile; fileRef = F9433BD11E5AAF420078E18F /* Swashbuckler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EC5E30A8B3F1734003AAFB6 /* Pods_SwashbucklerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A617C0391F6846D27F685C /* Pods_SwashbucklerTests.framework */; };
+		86FE9F4E97D321806EA3BBCB /* Pods_Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA20191BB2444B8690751A0 /* Pods_Swashbuckler.framework */; };
+		F97724121E5ADAAA00528180 /* Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97724081E5ADAAA00528180 /* Swashbuckler.framework */; };
+		F97724291E5ADAE900528180 /* PreprocessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724241E5ADAE900528180 /* PreprocessorTests.swift */; };
+		F977242B1E5ADAE900528180 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724271E5ADAE900528180 /* Tests.swift */; };
+		F97724321E5ADAF400528180 /* Preprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977242C1E5ADAF400528180 /* Preprocessor.swift */; };
+		F97724341E5ADAF400528180 /* Swashbuckler.h in Headers */ = {isa = PBXBuildFile; fileRef = F977242F1E5ADAF400528180 /* Swashbuckler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F97724351E5ADAF400528180 /* Swashbuckler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724301E5ADAF400528180 /* Swashbuckler.swift */; };
+		F97724361E5ADAF400528180 /* SwashValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724311E5ADAF400528180 /* SwashValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F9433BC01E5AAF060078E18F /* PBXContainerItemProxy */ = {
+		F97724131E5ADAAA00528180 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F9433BAC1E5AAF060078E18F /* Project object */;
+			containerPortal = F97723FF1E5ADAAA00528180 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F9433BB41E5AAF060078E18F;
+			remoteGlobalIDString = F97724071E5ADAAA00528180;
 			remoteInfo = Swashbuckler;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C71940996D3FA137E67B899 /* Pods_Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		202C748B2AECC64ECEE2D788 /* Pods-Swashbuckler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swashbuckler.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler.debug.xcconfig"; sourceTree = "<group>"; };
-		558F95899F426A3ED58706DD /* Pods-Swashbuckler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swashbuckler.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler.release.xcconfig"; sourceTree = "<group>"; };
-		F9433BB51E5AAF060078E18F /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9433BBE1E5AAF060078E18F /* SwashbucklerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwashbucklerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9433BD11E5AAF420078E18F /* Swashbuckler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swashbuckler.h; sourceTree = "<group>"; };
-		F9433BD41E5AAF420078E18F /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		F9433BD61E5AAF690078E18F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9433BD91E5AAF6E0078E18F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9433BDB1E5AAFB10078E18F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F9433BDC1E5AAFB10078E18F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
-		F9433BDD1E5AAFB10078E18F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1CA20191BB2444B8690751A0 /* Pods_Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FDD1AF704AAF21A241FC01A /* Pods-SwashbucklerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwashbucklerTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SwashbucklerTests/Pods-SwashbucklerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7949C49C07555FCB209D4A4 /* Pods-SwashbucklerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwashbucklerTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SwashbucklerTests/Pods-SwashbucklerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C795F7A1213B1C7A76180E41 /* Pods-Swashbuckler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swashbuckler.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler.release.xcconfig"; sourceTree = "<group>"; };
+		D4A617C0391F6846D27F685C /* Pods_SwashbucklerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwashbucklerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98CD258DD2E33BBADB324E7 /* Pods-Swashbuckler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swashbuckler.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler.debug.xcconfig"; sourceTree = "<group>"; };
+		F97724081E5ADAAA00528180 /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F97724111E5ADAAA00528180 /* SwashbucklerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwashbucklerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F97724231E5ADAE900528180 /* Font.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Font.swash; sourceTree = "<group>"; };
+		F97724241E5ADAE900528180 /* PreprocessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreprocessorTests.swift; path = Tests/PreprocessorTests.swift; sourceTree = SOURCE_ROOT; };
+		F97724261E5ADAE900528180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F97724271E5ADAE900528180 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tests.swift; path = Tests/Tests.swift; sourceTree = SOURCE_ROOT; };
+		F977242C1E5ADAF400528180 /* Preprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preprocessor.swift; sourceTree = "<group>"; };
+		F977242E1E5ADAF400528180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F977242F1E5ADAF400528180 /* Swashbuckler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swashbuckler.h; sourceTree = "<group>"; };
+		F97724301E5ADAF400528180 /* Swashbuckler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swashbuckler.swift; sourceTree = "<group>"; };
+		F97724311E5ADAF400528180 /* SwashValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwashValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F9433BB11E5AAF060078E18F /* Frameworks */ = {
+		F97724041E5ADAAA00528180 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0D86A82D9506CC7306E268 /* Pods_Swashbuckler.framework in Frameworks */,
+				86FE9F4E97D321806EA3BBCB /* Pods_Swashbuckler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9433BBB1E5AAF060078E18F /* Frameworks */ = {
+		F977240E1E5ADAAA00528180 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9433BBF1E5AAF060078E18F /* Swashbuckler.framework in Frameworks */,
+				F97724121E5ADAAA00528180 /* Swashbuckler.framework in Frameworks */,
+				3EC5E30A8B3F1734003AAFB6 /* Pods_SwashbucklerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26BFEEFCFC2E15152FAE8BC6 /* Frameworks */ = {
+		6F3D5AA51B973E1997925231 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0C71940996D3FA137E67B899 /* Pods_Swashbuckler.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		411C33B8D911E10E82C8860A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				202C748B2AECC64ECEE2D788 /* Pods-Swashbuckler.debug.xcconfig */,
-				558F95899F426A3ED58706DD /* Pods-Swashbuckler.release.xcconfig */,
+				D98CD258DD2E33BBADB324E7 /* Pods-Swashbuckler.debug.xcconfig */,
+				C795F7A1213B1C7A76180E41 /* Pods-Swashbuckler.release.xcconfig */,
+				B7949C49C07555FCB209D4A4 /* Pods-SwashbucklerTests.debug.xcconfig */,
+				5FDD1AF704AAF21A241FC01A /* Pods-SwashbucklerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F9433BAB1E5AAF060078E18F = {
+		A7E44C07FCD926237DE84F58 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F9433BDB1E5AAFB10078E18F /* LICENSE */,
-				F9433BDC1E5AAFB10078E18F /* Podfile */,
-				F9433BDD1E5AAFB10078E18F /* README.md */,
-				F9433BCF1E5AAF420078E18F /* Swashbuckler */,
-				F9433BD21E5AAF420078E18F /* Tests */,
-				F9433BB61E5AAF060078E18F /* Products */,
-				411C33B8D911E10E82C8860A /* Pods */,
-				26BFEEFCFC2E15152FAE8BC6 /* Frameworks */,
+				1CA20191BB2444B8690751A0 /* Pods_Swashbuckler.framework */,
+				D4A617C0391F6846D27F685C /* Pods_SwashbucklerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F97723FE1E5ADAAA00528180 = {
+			isa = PBXGroup;
+			children = (
+				F977240A1E5ADAAA00528180 /* Swashbuckler */,
+				F97724151E5ADAAA00528180 /* Tests */,
+				F97724091E5ADAAA00528180 /* Products */,
+				6F3D5AA51B973E1997925231 /* Pods */,
+				A7E44C07FCD926237DE84F58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F9433BB61E5AAF060078E18F /* Products */ = {
+		F97724091E5ADAAA00528180 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F9433BB51E5AAF060078E18F /* Swashbuckler.framework */,
-				F9433BBE1E5AAF060078E18F /* SwashbucklerTests.xctest */,
+				F97724081E5ADAAA00528180 /* Swashbuckler.framework */,
+				F97724111E5ADAAA00528180 /* SwashbucklerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9433BCF1E5AAF420078E18F /* Swashbuckler */ = {
+		F977240A1E5ADAAA00528180 /* Swashbuckler */ = {
 			isa = PBXGroup;
 			children = (
-				F9433BD11E5AAF420078E18F /* Swashbuckler.h */,
-				F9433BD51E5AAF690078E18F /* Supporting Files */,
+				F977242F1E5ADAF400528180 /* Swashbuckler.h */,
+				F977242C1E5ADAF400528180 /* Preprocessor.swift */,
+				F97724301E5ADAF400528180 /* Swashbuckler.swift */,
+				F97724311E5ADAF400528180 /* SwashValue.swift */,
+				F977242D1E5ADAF400528180 /* Supporting Files */,
 			);
 			path = Swashbuckler;
 			sourceTree = "<group>";
 		};
-		F9433BD21E5AAF420078E18F /* Tests */ = {
+		F97724151E5ADAAA00528180 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F9433BD41E5AAF420078E18F /* Tests.swift */,
-				F9433BD81E5AAF6E0078E18F /* Supporting Files */,
+				F97724241E5ADAE900528180 /* PreprocessorTests.swift */,
+				F97724271E5ADAE900528180 /* Tests.swift */,
+				F97724221E5ADAE900528180 /* Data */,
+				F97724251E5ADAE900528180 /* Supporting Files */,
 			);
-			path = Tests;
+			name = Tests;
+			path = SwashbucklerTests;
 			sourceTree = "<group>";
 		};
-		F9433BD51E5AAF690078E18F /* Supporting Files */ = {
+		F97724221E5ADAE900528180 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F9433BD61E5AAF690078E18F /* Info.plist */,
+				F97724231E5ADAE900528180 /* Font.swash */,
 			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
+			name = Data;
+			path = Tests/Data;
+			sourceTree = SOURCE_ROOT;
 		};
-		F9433BD81E5AAF6E0078E18F /* Supporting Files */ = {
+		F97724251E5ADAE900528180 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F9433BD91E5AAF6E0078E18F /* Info.plist */,
+				F97724261E5ADAE900528180 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "Tests/Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		F977242D1E5ADAF400528180 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F977242E1E5ADAF400528180 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,27 +162,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F9433BB21E5AAF060078E18F /* Headers */ = {
+		F97724051E5ADAAA00528180 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9433BDF1E5AB0A50078E18F /* Swashbuckler.h in Headers */,
+				F97724341E5ADAF400528180 /* Swashbuckler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F9433BB41E5AAF060078E18F /* Swashbuckler */ = {
+		F97724071E5ADAAA00528180 /* Swashbuckler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9433BC91E5AAF060078E18F /* Build configuration list for PBXNativeTarget "Swashbuckler" */;
+			buildConfigurationList = F977241C1E5ADAAA00528180 /* Build configuration list for PBXNativeTarget "Swashbuckler" */;
 			buildPhases = (
-				872A666224763B76D6A591DC /* [CP] Check Pods Manifest.lock */,
-				F9433BB01E5AAF060078E18F /* Sources */,
-				F9433BB11E5AAF060078E18F /* Frameworks */,
-				F9433BB21E5AAF060078E18F /* Headers */,
-				F9433BB31E5AAF060078E18F /* Resources */,
-				7F9D9C0E5389CDC012139723 /* [CP] Copy Pods Resources */,
+				6594709C965E074AAF4526E9 /* [CP] Check Pods Manifest.lock */,
+				F97724031E5ADAAA00528180 /* Sources */,
+				F97724041E5ADAAA00528180 /* Frameworks */,
+				F97724051E5ADAAA00528180 /* Headers */,
+				F97724061E5ADAAA00528180 /* Resources */,
+				98A9748AB776B938141F0765 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,76 +190,81 @@
 			);
 			name = Swashbuckler;
 			productName = Swashbuckler;
-			productReference = F9433BB51E5AAF060078E18F /* Swashbuckler.framework */;
+			productReference = F97724081E5ADAAA00528180 /* Swashbuckler.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F9433BBD1E5AAF060078E18F /* SwashbucklerTests */ = {
+		F97724101E5ADAAA00528180 /* SwashbucklerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F9433BCC1E5AAF060078E18F /* Build configuration list for PBXNativeTarget "SwashbucklerTests" */;
+			buildConfigurationList = F977241F1E5ADAAA00528180 /* Build configuration list for PBXNativeTarget "SwashbucklerTests" */;
 			buildPhases = (
-				F9433BBA1E5AAF060078E18F /* Sources */,
-				F9433BBB1E5AAF060078E18F /* Frameworks */,
-				F9433BBC1E5AAF060078E18F /* Resources */,
+				690CE3215159998A766B562B /* [CP] Check Pods Manifest.lock */,
+				F977240D1E5ADAAA00528180 /* Sources */,
+				F977240E1E5ADAAA00528180 /* Frameworks */,
+				F977240F1E5ADAAA00528180 /* Resources */,
+				8412016F21B692F20D96B353 /* [CP] Embed Pods Frameworks */,
+				B9906E217D16596CC3371196 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F9433BC11E5AAF060078E18F /* PBXTargetDependency */,
+				F97724141E5ADAAA00528180 /* PBXTargetDependency */,
 			);
 			name = SwashbucklerTests;
 			productName = SwashbucklerTests;
-			productReference = F9433BBE1E5AAF060078E18F /* SwashbucklerTests.xctest */;
+			productReference = F97724111E5ADAAA00528180 /* SwashbucklerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F9433BAC1E5AAF060078E18F /* Project object */ = {
+		F97723FF1E5ADAAA00528180 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Brwd Inc.";
 				TargetAttributes = {
-					F9433BB41E5AAF060078E18F = {
+					F97724071E5ADAAA00528180 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 424PKES6ZU;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
-					F9433BBD1E5AAF060078E18F = {
+					F97724101E5ADAAA00528180 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 424PKES6ZU;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F9433BAF1E5AAF060078E18F /* Build configuration list for PBXProject "Swashbuckler" */;
+			buildConfigurationList = F97724021E5ADAAA00528180 /* Build configuration list for PBXProject "Swashbuckler" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F9433BAB1E5AAF060078E18F;
-			productRefGroup = F9433BB61E5AAF060078E18F /* Products */;
+			mainGroup = F97723FE1E5ADAAA00528180;
+			productRefGroup = F97724091E5ADAAA00528180 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F9433BB41E5AAF060078E18F /* Swashbuckler */,
-				F9433BBD1E5AAF060078E18F /* SwashbucklerTests */,
+				F97724071E5ADAAA00528180 /* Swashbuckler */,
+				F97724101E5ADAAA00528180 /* SwashbucklerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F9433BB31E5AAF060078E18F /* Resources */ = {
+		F97724061E5ADAAA00528180 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9433BBC1E5AAF060078E18F /* Resources */ = {
+		F977240F1E5ADAAA00528180 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,22 +274,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7F9D9C0E5389CDC012139723 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		872A666224763B76D6A591DC /* [CP] Check Pods Manifest.lock */ = {
+		6594709C965E074AAF4526E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,36 +289,100 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		F9433BB01E5AAF060078E18F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		690CE3215159998A766B562B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-		F9433BBA1E5AAF060078E18F /* Sources */ = {
+		8412016F21B692F20D96B353 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SwashbucklerTests/Pods-SwashbucklerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98A9748AB776B938141F0765 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9906E217D16596CC3371196 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SwashbucklerTests/Pods-SwashbucklerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F97724031E5ADAAA00528180 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9433BDE1E5AAFBA0078E18F /* Tests.swift in Sources */,
+				F97724321E5ADAF400528180 /* Preprocessor.swift in Sources */,
+				F97724361E5ADAF400528180 /* SwashValue.swift in Sources */,
+				F97724351E5ADAF400528180 /* Swashbuckler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F977240D1E5ADAAA00528180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F97724291E5ADAE900528180 /* PreprocessorTests.swift in Sources */,
+				F977242B1E5ADAE900528180 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F9433BC11E5AAF060078E18F /* PBXTargetDependency */ = {
+		F97724141E5ADAAA00528180 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F9433BB41E5AAF060078E18F /* Swashbuckler */;
-			targetProxy = F9433BC01E5AAF060078E18F /* PBXContainerItemProxy */;
+			target = F97724071E5ADAAA00528180 /* Swashbuckler */;
+			targetProxy = F97724131E5ADAAA00528180 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F9433BC71E5AAF060078E18F /* Debug */ = {
+		F977241A1E5ADAAA00528180 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -322,7 +403,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -342,19 +423,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		F9433BC81E5AAF060078E18F /* Release */ = {
+		F977241B1E5ADAAA00528180 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -375,7 +455,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -389,50 +469,55 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		F9433BCA1E5AAF060078E18F /* Debug */ = {
+		F977241D1E5ADAAA00528180 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 202C748B2AECC64ECEE2D788 /* Pods-Swashbuckler.debug.xcconfig */;
+			baseConfigurationReference = D98CD258DD2E33BBADB324E7 /* Pods-Swashbuckler.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 424PKES6ZU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Swashbuckler/Supporting Files/Info.plist";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Swashbuckler/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.brwd.Swashbuckler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		F9433BCB1E5AAF060078E18F /* Release */ = {
+		F977241E1E5ADAAA00528180 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 558F95899F426A3ED58706DD /* Pods-Swashbuckler.release.xcconfig */;
+			baseConfigurationReference = C795F7A1213B1C7A76180E41 /* Pods-Swashbuckler.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 424PKES6ZU;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Swashbuckler/Supporting Files/Info.plist";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Swashbuckler/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.brwd.Swashbuckler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -440,24 +525,33 @@
 			};
 			name = Release;
 		};
-		F9433BCD1E5AAF060078E18F /* Debug */ = {
+		F97724201E5ADAAA00528180 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7949C49C07555FCB209D4A4 /* Pods-SwashbucklerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 424PKES6ZU;
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.brwd.SwashbucklerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		F9433BCE1E5AAF060078E18F /* Release */ = {
+		F97724211E5ADAAA00528180 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FDD1AF704AAF21A241FC01A /* Pods-SwashbucklerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 424PKES6ZU;
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.brwd.SwashbucklerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -467,34 +561,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F9433BAF1E5AAF060078E18F /* Build configuration list for PBXProject "Swashbuckler" */ = {
+		F97724021E5ADAAA00528180 /* Build configuration list for PBXProject "Swashbuckler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9433BC71E5AAF060078E18F /* Debug */,
-				F9433BC81E5AAF060078E18F /* Release */,
+				F977241A1E5ADAAA00528180 /* Debug */,
+				F977241B1E5ADAAA00528180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9433BC91E5AAF060078E18F /* Build configuration list for PBXNativeTarget "Swashbuckler" */ = {
+		F977241C1E5ADAAA00528180 /* Build configuration list for PBXNativeTarget "Swashbuckler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9433BCA1E5AAF060078E18F /* Debug */,
-				F9433BCB1E5AAF060078E18F /* Release */,
+				F977241D1E5ADAAA00528180 /* Debug */,
+				F977241E1E5ADAAA00528180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9433BCC1E5AAF060078E18F /* Build configuration list for PBXNativeTarget "SwashbucklerTests" */ = {
+		F977241F1E5ADAAA00528180 /* Build configuration list for PBXNativeTarget "SwashbucklerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F9433BCD1E5AAF060078E18F /* Debug */,
-				F9433BCE1E5AAF060078E18F /* Release */,
+				F97724201E5ADAAA00528180 /* Debug */,
+				F97724211E5ADAAA00528180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F9433BAC1E5AAF060078E18F /* Project object */;
+	rootObject = F97723FF1E5ADAAA00528180 /* Project object */;
 }

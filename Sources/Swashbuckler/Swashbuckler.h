@@ -6,7 +6,7 @@
 //  Copyright © 2017 Brwd Inc. All rights reserved.
 //
 
-@import UIKit;
+#import <Cocoa/Cocoa.h>
 
 //! Project version number for Swashbuckler.
 FOUNDATION_EXPORT double SwashbucklerVersionNumber;
