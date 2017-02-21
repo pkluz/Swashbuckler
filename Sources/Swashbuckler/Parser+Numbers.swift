@@ -15,14 +15,11 @@ fileprivate let decimalSeparator = "." as Character
 
 extension Parser {
     
-    /// Parses a decimal number.
+    /// Parser for decimal numbers.
     internal static func decimalParser() -> Parser<Character,Float> {
         let negativeSign = "-" as Character
         let optionalSign = optional(oneOrMore(char(negativeSign)))
-        let number = unsignedDecimalParser() { first, second -> Float in
-            guard let second = second else { return 0.0 }
-            return Float("\(first).\(second)")!
-        }
+        let number = unsignedDecimalParser()
         let signedParser = tuple <^> optionalSign <*> number
         
         return { (number: (sign: String?, value: Float)) -> Float in
@@ -31,17 +28,23 @@ extension Parser {
         } <^> signedParser
     }
     
-    fileprivate static func unsignedDecimalParser<T>(transformer: @escaping (String, String?) -> (T)) -> Parser<Character, T> {
+    /// Parser for unsigned decimals.
+    fileprivate static func unsignedDecimalParser() -> Parser<Character, Float> {
         let number = zeroOrMore(oneOf("0123456789"))
         let parser = tuple <^> number <*> optional(char(decimalSeparator) *> number)
-        return transformer <^> parser
+        return { first, second -> Float in
+            guard let second = second else { return Float(first) ?? 0.0 }
+            return Float("\(first).\(second)")!
+        } <^> parser
     }
     
+    /// Parser for unsigned integers.
     internal static func unsignedIntegerParser() -> Parser<Character, UInt> {
         let number = oneOrMore(oneOf("0123456789"))
         return { UInt($0)! } <^> number
     }
     
+    /// Parser for hex strings.
     internal static func hexComponentsParser() -> Parser<Character, ColorComponents> {
         let hash = "#" as Character
         let hexCharacters = "0123456789ABCDEFabcdef"
@@ -51,13 +54,14 @@ extension Parser {
         
         let colorComponentsParser = hashParser *> (tuple <^> hexDigitTupleParser <*> hexDigitTupleParser <*> hexDigitTupleParser <*> optional(hexDigitTupleParser))
         return {
-            (UInt8($0.0, radix: 16) ?? 0,
-             UInt8($0.1, radix: 16) ?? 0,
-             UInt8($0.2, radix: 16) ?? 0,
-             UInt8($0.3 ?? "FF", radix: 16) ?? 0)
+            (UInt8($0.0, radix: 16)!,
+             UInt8($0.1, radix: 16)!,
+             UInt8($0.2, radix: 16)!,
+             UInt8($0.3 ?? "FF", radix: 16)!)
         } <^> colorComponentsParser
     }
     
+    /// Parser for rgba strings.
     internal static func rgbaComponentsParser() -> Parser<Character, ColorComponents> {
         let prefix = "rgba"
         let openParenParser = char("(" as Character)

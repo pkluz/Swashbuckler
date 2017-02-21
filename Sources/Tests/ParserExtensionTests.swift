@@ -1,5 +1,5 @@
 //
-//  ParserTests.swift
+//  ParserExtensionTests.swift
 //  Tests
 //
 //  Created by Philip Kluz on 2017-02-20.
@@ -10,7 +10,7 @@ import XCTest
 import FootlessParser
 @testable import Swashbuckler
 
-class ParserTests: XCTestCase {
+class ParserExtensionTests: XCTestCase {
     
     func testDecimalParser() {
         let parser = Parser<Character, Float>.decimalParser()
