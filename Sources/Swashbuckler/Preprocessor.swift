@@ -12,17 +12,20 @@ public struct Preprocessor {
     
     fileprivate static let openingDelimiter = "{"
     fileprivate static let closingDelimiter = "}"
+    fileprivate static let tabAsSpaces = "    "
     
+    /// Runs the preprocessor on a given input string.
     internal static func run(input string: String) -> String {
-        let lines = string.replacingOccurrences(of: "\t", with: "\n\n")
-            .components(separatedBy: "\n")
-            .filter { !$0.isEmpty }
-        let processed = [ openingDelimiter ] + insertTokens(lines: lines, stack: [0])
+        let lines = string.replacingOccurrences(of: "\t", with: tabAsSpaces)
+                          .components(separatedBy: "\n")
+                          .filter { !$0.isEmpty }
+        let processed = [ openingDelimiter ] + insertDelimiters(lines: lines, stack: [0])
         
         return processed.joined(separator: "\n")
     }
     
-    fileprivate static func insertTokens(lines: [String], stack: [UInt]) -> [String] {
+    /// Inserts block delimiters into a tab and space aligned file.
+    fileprivate static func insertDelimiters(lines: [String], stack: [UInt]) -> [String] {
         guard let line = lines.first else {
             return stack.map { _ in closingDelimiter }
         }
@@ -33,24 +36,26 @@ public struct Preprocessor {
         let stackRest = Array(stack.dropFirst())
         
         if indentation > stackTop {
-            return [ openingDelimiter, line ] + insertTokens(lines: rest, stack: [indentation] + stack )
+            return [ openingDelimiter, line ] + insertDelimiters(lines: rest, stack: [indentation] + stack )
         }
         
         if indentation == stackTop {
-            return [ line ] + insertTokens(lines: rest, stack: stack)
+            return [ line ] + insertDelimiters(lines: rest, stack: stack)
         }
         
         if indentation < stackTop {
-            return [ closingDelimiter ] + insertTokens(lines: lines, stack: stackRest)
+            return [ closingDelimiter ] + insertDelimiters(lines: lines, stack: stackRest)
         }
         
         return []
     }
     
+    /// Checks whether the give input character is a whitespace character.
     fileprivate static func isWhitespace(character ch: Character) -> Bool {
         return ch == " " as Character || ch == "\t" as Character
     }
     
+    /// Computes the level of indentation for a given line
     fileprivate static func computeIndentation(for line: String) -> UInt {
         var sum: UInt = 0
         

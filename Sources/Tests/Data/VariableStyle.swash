@@ -1,0 +1,32 @@
+fonts
+  default 12pt 'Helvetica'
+  defaultBold 14pt 'Helvetica-Bold'
+
+colors
+  primary #ff00ff
+  secondary #ff0000
+  tenary rgba(255, 150, 0, 100)
+
+tabBarController
+  fonts
+    default @default
+    defaultBold @defaultBold
+
+  colors
+    backgroundColor @primary
+    tintColor @secondary
+    tenary rgba(100, 150, 0, 100)
+
+  isVisible true
+  isHidden false
+
+navBarController
+  fonts
+    default @default
+
+  colors
+    backgroundColor @primary
+    tintColor @secondary
+
+  isHidden false
+  iconSize 50pt 50pt

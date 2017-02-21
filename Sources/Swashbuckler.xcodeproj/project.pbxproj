@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		3EC5E30A8B3F1734003AAFB6 /* Pods_SwashbucklerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A617C0391F6846D27F685C /* Pods_SwashbucklerTests.framework */; };
 		86FE9F4E97D321806EA3BBCB /* Pods_Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA20191BB2444B8690751A0 /* Pods_Swashbuckler.framework */; };
+		F96644E21E5BB370007E22D0 /* Color.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644DF1E5BB370007E22D0 /* Color.swash */; };
+		F96644E31E5BB370007E22D0 /* Style.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E01E5BB370007E22D0 /* Style.swash */; };
+		F96644E41E5BB370007E22D0 /* VariableStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E11E5BB370007E22D0 /* VariableStyle.swash */; };
 		F97724121E5ADAAA00528180 /* Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97724081E5ADAAA00528180 /* Swashbuckler.framework */; };
 		F97724291E5ADAE900528180 /* PreprocessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724241E5ADAE900528180 /* PreprocessorTests.swift */; };
-		F977242B1E5ADAE900528180 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724271E5ADAE900528180 /* Tests.swift */; };
+		F977242B1E5ADAE900528180 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724271E5ADAE900528180 /* ParserTests.swift */; };
 		F97724321E5ADAF400528180 /* Preprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977242C1E5ADAF400528180 /* Preprocessor.swift */; };
 		F97724341E5ADAF400528180 /* Swashbuckler.h in Headers */ = {isa = PBXBuildFile; fileRef = F977242F1E5ADAF400528180 /* Swashbuckler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F97724351E5ADAF400528180 /* Swashbuckler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724301E5ADAF400528180 /* Swashbuckler.swift */; };
 		F97724361E5ADAF400528180 /* SwashValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724311E5ADAF400528180 /* SwashValue.swift */; };
+		F97724381E5B93CF00528180 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724371E5B93CF00528180 /* Parser.swift */; };
+		F977243A1E5B940700528180 /* Parser+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724391E5B940700528180 /* Parser+Numbers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,17 +40,22 @@
 		C795F7A1213B1C7A76180E41 /* Pods-Swashbuckler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swashbuckler.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler.release.xcconfig"; sourceTree = "<group>"; };
 		D4A617C0391F6846D27F685C /* Pods_SwashbucklerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwashbucklerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98CD258DD2E33BBADB324E7 /* Pods-Swashbuckler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swashbuckler.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Swashbuckler/Pods-Swashbuckler.debug.xcconfig"; sourceTree = "<group>"; };
+		F96644DF1E5BB370007E22D0 /* Color.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Color.swash; sourceTree = "<group>"; };
+		F96644E01E5BB370007E22D0 /* Style.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Style.swash; sourceTree = "<group>"; };
+		F96644E11E5BB370007E22D0 /* VariableStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VariableStyle.swash; sourceTree = "<group>"; };
 		F97724081E5ADAAA00528180 /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97724111E5ADAAA00528180 /* SwashbucklerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwashbucklerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97724231E5ADAE900528180 /* Font.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Font.swash; sourceTree = "<group>"; };
 		F97724241E5ADAE900528180 /* PreprocessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreprocessorTests.swift; path = Tests/PreprocessorTests.swift; sourceTree = SOURCE_ROOT; };
 		F97724261E5ADAE900528180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F97724271E5ADAE900528180 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tests.swift; path = Tests/Tests.swift; sourceTree = SOURCE_ROOT; };
+		F97724271E5ADAE900528180 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParserTests.swift; path = Tests/ParserTests.swift; sourceTree = SOURCE_ROOT; };
 		F977242C1E5ADAF400528180 /* Preprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preprocessor.swift; sourceTree = "<group>"; };
 		F977242E1E5ADAF400528180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F977242F1E5ADAF400528180 /* Swashbuckler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swashbuckler.h; sourceTree = "<group>"; };
 		F97724301E5ADAF400528180 /* Swashbuckler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swashbuckler.swift; sourceTree = "<group>"; };
 		F97724311E5ADAF400528180 /* SwashValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwashValue.swift; sourceTree = "<group>"; };
+		F97724371E5B93CF00528180 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F97724391E5B940700528180 /* Parser+Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parser+Numbers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				F977242F1E5ADAF400528180 /* Swashbuckler.h */,
-				F977242C1E5ADAF400528180 /* Preprocessor.swift */,
 				F97724301E5ADAF400528180 /* Swashbuckler.swift */,
+				F977242C1E5ADAF400528180 /* Preprocessor.swift */,
+				F97724371E5B93CF00528180 /* Parser.swift */,
 				F97724311E5ADAF400528180 /* SwashValue.swift */,
+				F977243B1E5B941200528180 /* Extensions */,
 				F977242D1E5ADAF400528180 /* Supporting Files */,
 			);
 			path = Swashbuckler;
@@ -125,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				F97724241E5ADAE900528180 /* PreprocessorTests.swift */,
-				F97724271E5ADAE900528180 /* Tests.swift */,
+				F97724271E5ADAE900528180 /* ParserTests.swift */,
 				F97724221E5ADAE900528180 /* Data */,
 				F97724251E5ADAE900528180 /* Supporting Files */,
 			);
@@ -137,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				F97724231E5ADAE900528180 /* Font.swash */,
+				F96644DF1E5BB370007E22D0 /* Color.swash */,
+				F96644E01E5BB370007E22D0 /* Style.swash */,
+				F96644E11E5BB370007E22D0 /* VariableStyle.swash */,
 			);
 			name = Data;
 			path = Tests/Data;
@@ -157,6 +172,14 @@
 				F977242E1E5ADAF400528180 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F977243B1E5B941200528180 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F97724391E5B940700528180 /* Parser+Numbers.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96644E41E5BB370007E22D0 /* VariableStyle.swash in Resources */,
+				F96644E31E5BB370007E22D0 /* Style.swash in Resources */,
+				F96644E21E5BB370007E22D0 /* Color.swash in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,8 +382,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97724381E5B93CF00528180 /* Parser.swift in Sources */,
 				F97724321E5ADAF400528180 /* Preprocessor.swift in Sources */,
 				F97724361E5ADAF400528180 /* SwashValue.swift in Sources */,
+				F977243A1E5B940700528180 /* Parser+Numbers.swift in Sources */,
 				F97724351E5ADAF400528180 /* Swashbuckler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F97724291E5ADAE900528180 /* PreprocessorTests.swift in Sources */,
-				F977242B1E5ADAE900528180 /* Tests.swift in Sources */,
+				F977242B1E5ADAE900528180 /* ParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

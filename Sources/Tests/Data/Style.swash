@@ -1,0 +1,16 @@
+global
+  fonts
+    default 12pt 'Helvetica'
+    defaultBold 14pt 'Helvetica-Bold'
+
+  colors
+    primaryColor #ff00ff
+    secondaryColor #ff0000
+
+tabBarController
+  fonts
+    titleFont @default
+
+  colors
+    normalColor @primaryColor
+    selectedColor @secondaryColor
