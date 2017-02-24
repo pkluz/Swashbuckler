@@ -21,6 +21,7 @@
 		F97724361E5ADAF400528180 /* SwashValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724311E5ADAF400528180 /* SwashValue.swift */; };
 		F97724381E5B93CF00528180 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724371E5B93CF00528180 /* Parser.swift */; };
 		F977243A1E5B940700528180 /* Parser+Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724391E5B940700528180 /* Parser+Numbers.swift */; };
+		F9A6BA9E1E606C0F00907425 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F9A6BA9D1E606C0F00907425 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		F97724311E5ADAF400528180 /* SwashValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwashValue.swift; sourceTree = "<group>"; };
 		F97724371E5B93CF00528180 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F97724391E5B940700528180 /* Parser+Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Parser+Numbers.swift"; sourceTree = "<group>"; };
+		F9A6BA9D1E606C0F00907425 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		F97723FE1E5ADAAA00528180 = {
 			isa = PBXGroup;
 			children = (
+				F9A6BA9D1E606C0F00907425 /* README.md */,
 				F977240A1E5ADAAA00528180 /* Swashbuckler */,
 				F97724151E5ADAAA00528180 /* Tests */,
 				F97724091E5ADAAA00528180 /* Products */,
@@ -382,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A6BA9E1E606C0F00907425 /* README.md in Sources */,
 				F97724381E5B93CF00528180 /* Parser.swift in Sources */,
 				F97724321E5ADAF400528180 /* Preprocessor.swift in Sources */,
 				F97724361E5ADAF400528180 /* SwashValue.swift in Sources */,

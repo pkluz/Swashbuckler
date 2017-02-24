@@ -10,7 +10,7 @@ import Foundation
 import FootlessParser
 
 public struct Swashbuckler {
-    
+
 //    public func parse(string input: String) -> SwashValue {
 //        
 //    }
