@@ -5,7 +5,7 @@ Swashbuckler is a tool to formalize and automate the styling of applications.
 
 Similar to CSS, the swashbuckler allows you to define style classes. Style classes group style properties and automatically trigger the generation of extensions containing convenient accessors to style related information to structs and/or classes with the matching name.
 
-```
+```css
 .feedViewController
     backgroundColor #FF00CC
     defaultFont 12pt 'Helvetica-Neue'
@@ -13,7 +13,7 @@ Similar to CSS, the swashbuckler allows you to define style classes. Style class
 
 The above swashbuckler stylesheet will emit the following Swift code on iOS:
 
-```
+```swift
 public struct FeedViewControllerStyle {
 
     public var backgroundColor: UIColor {
@@ -38,7 +38,7 @@ Please note that your application will _not_ compile _if_ the style classes name
 
 Blocks can be nested, to allow for hierarchical structuring of your styles. Note the difference between defining a block for a style class and a style element. A style element will not attempt to extend an existing type, instead only a style struct will be generated.
 
-```
+```css
 .feedViewController
     backgroundColor #FF00CC
     defaultFont 12pt 'Helvetica-Neue'
@@ -49,7 +49,7 @@ Blocks can be nested, to allow for hierarchical structuring of your styles. Note
 
 The above swashbuckler stylesheet will emit the following Swift code on iOS:
 
-```
+```swift
 public struct FeedViewControllerStyle {
 
     public struct FeedHeaderViewStyle {
