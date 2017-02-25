@@ -17,12 +17,13 @@ public struct Parser {
     
     /// Combinator, parsing any property.
     internal static var anyPropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        // Note: The order in which these are tried is important. Consider syntax of properties before modifying this.
         return colorPropertyParser <|>
                fontPropertyParser <|>
+               boolPropertyParser <|>
                rectPropertyParser <|>
                sizePropertyParser <|>
-               numberPropertyParser <|>
-               boolPropertyParser
+               numberPropertyParser
     }
     
     /// Parser for color properties.
