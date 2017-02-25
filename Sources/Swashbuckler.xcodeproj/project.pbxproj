@@ -14,6 +14,8 @@
 		F90DDF161E61785B00929D0F /* PropertyParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF151E61785B00929D0F /* PropertyParserTests.swift */; };
 		F90DDF181E617A1B00929D0F /* FootlessParser+Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF171E617A1B00929D0F /* FootlessParser+Sizes.swift */; };
 		F90DDF1B1E617BCC00929D0F /* SizeParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF191E617B5500929D0F /* SizeParserTests.swift */; };
+		F90DDF1D1E61874D00929D0F /* FootlessParser+Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF1C1E61874D00929D0F /* FootlessParser+Rects.swift */; };
+		F90DDF1F1E61898000929D0F /* RectParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF1E1E61898000929D0F /* RectParserTests.swift */; };
 		F9341FEA1E60C1C800DBC959 /* SimpleStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F9A6BA9F1E6076E900907425 /* SimpleStyle.swash */; };
 		F96644E31E5BB370007E22D0 /* NestedStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E01E5BB370007E22D0 /* NestedStyle.swash */; };
 		F96644E41E5BB370007E22D0 /* VariableStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E11E5BB370007E22D0 /* VariableStyle.swash */; };
@@ -55,6 +57,8 @@
 		F90DDF151E61785B00929D0F /* PropertyParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PropertyParserTests.swift; path = Tests/PropertyParserTests.swift; sourceTree = SOURCE_ROOT; };
 		F90DDF171E617A1B00929D0F /* FootlessParser+Sizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FootlessParser+Sizes.swift"; sourceTree = "<group>"; };
 		F90DDF191E617B5500929D0F /* SizeParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeParserTests.swift; path = Tests/SizeParserTests.swift; sourceTree = SOURCE_ROOT; };
+		F90DDF1C1E61874D00929D0F /* FootlessParser+Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FootlessParser+Rects.swift"; sourceTree = "<group>"; };
+		F90DDF1E1E61898000929D0F /* RectParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectParserTests.swift; path = Tests/RectParserTests.swift; sourceTree = SOURCE_ROOT; };
 		F96644E01E5BB370007E22D0 /* NestedStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NestedStyle.swash; sourceTree = "<group>"; };
 		F96644E11E5BB370007E22D0 /* VariableStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VariableStyle.swash; sourceTree = "<group>"; };
 		F97724081E5ADAAA00528180 /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,7 @@
 				F90DDF151E61785B00929D0F /* PropertyParserTests.swift */,
 				F9DDFE2B1E616C2600369260 /* FontParserTests.swift */,
 				F90DDF191E617B5500929D0F /* SizeParserTests.swift */,
+				F90DDF1E1E61898000929D0F /* RectParserTests.swift */,
 				F9A6BAA51E60BC1600907425 /* ColorParserTests.swift */,
 				F90DDF131E61772900929D0F /* BoolParserTests.swift */,
 				F97724271E5ADAE900528180 /* FootlessParserExtensionTests.swift */,
@@ -208,6 +213,7 @@
 				F90DDF111E61759F00929D0F /* FootlessParser+Bools.swift */,
 				F90DDF171E617A1B00929D0F /* FootlessParser+Sizes.swift */,
 				F9DDFE2D1E616CA900369260 /* FootlessParser+Identifiers.swift */,
+				F90DDF1C1E61874D00929D0F /* FootlessParser+Rects.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				F90DDF121E61759F00929D0F /* FootlessParser+Bools.swift in Sources */,
 				F977243A1E5B940700528180 /* FootlessParser+Numbers.swift in Sources */,
 				F97724351E5ADAF400528180 /* Swashbuckler.swift in Sources */,
+				F90DDF1D1E61874D00929D0F /* FootlessParser+Rects.swift in Sources */,
 				F9DDFE301E616E3D00369260 /* FootlessParser+Fonts.swift in Sources */,
 				F90DDF181E617A1B00929D0F /* FootlessParser+Sizes.swift in Sources */,
 				F9DDFE2E1E616CA900369260 /* FootlessParser+Identifiers.swift in Sources */,
@@ -435,6 +442,7 @@
 				F977242B1E5ADAE900528180 /* FootlessParserExtensionTests.swift in Sources */,
 				F90DDF141E61772900929D0F /* BoolParserTests.swift in Sources */,
 				F9A6BAA71E60BF5000907425 /* ColorParserTests.swift in Sources */,
+				F90DDF1F1E61898000929D0F /* RectParserTests.swift in Sources */,
 				F9DDFE2C1E616C2600369260 /* FontParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

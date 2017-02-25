@@ -10,6 +10,7 @@ import FootlessParser
 
 extension FootlessParser.Parser {
     
+    /// Parser for size values.
     internal static var sizePropertyParser: FootlessParser.Parser<Character, CGSize> {
         let pointParser = FootlessParser.Parser.pointValueParser
         let pointTupleParser = tuple <^> (pointParser <* oneOrMore(whitespace)) <*> pointParser

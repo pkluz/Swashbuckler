@@ -19,6 +19,7 @@ public struct Parser {
     internal static var anyPropertyParser: FootlessParser.Parser<Character, SwashValue> {
         return colorPropertyParser <|>
                fontPropertyParser <|>
+               rectPropertyParser <|>
                sizePropertyParser <|>
                boolPropertyParser
     }
@@ -42,6 +43,20 @@ public struct Parser {
         let parser = propertyParser(with: FootlessParser.Parser<Character, ColorDescriptor>.sizePropertyParser)
         let transformer = { (id: String, size: CGSize) -> SwashValue in
             return SwashValue.size(id: id, width: Float(size.width), height: Float(size.height))
+        }
+        
+        return transformer <^> parser
+    }
+    
+    /// Parser for rect properties.
+    internal static var rectPropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        let parser = propertyParser(with: FootlessParser.Parser<Character, ColorDescriptor>.rectPropertyParser)
+        let transformer = { (id: String, rect: CGRect) -> SwashValue in
+            return SwashValue.rect(id: id,
+                                   x: Float(rect.origin.x),
+                                   y: Float(rect.origin.y),
+                                   width: Float(rect.size.width),
+                                   height: Float(rect.size.height))
         }
         
         return transformer <^> parser
