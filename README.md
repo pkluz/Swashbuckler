@@ -1,6 +1,19 @@
 # Swashbuckler
 Swashbuckler is a tool to formalize and automate the styling of applications.
 
+# Supported Properties
+
+Swashbuckler allows you to generate any of the following properties as part of your style objects:
+
+```
+- Colors
+- Fonts
+- Booleans
+- Numbers
+- Sizes
+- Rects
+```
+
 # Style Classes
 
 Similar to CSS, the swashbuckler allows you to define style classes. Style classes group style properties and automatically trigger the generation of extensions containing convenient accessors to style related information to structs and/or classes with the matching name.
