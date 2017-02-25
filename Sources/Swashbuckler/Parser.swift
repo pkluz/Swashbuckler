@@ -18,6 +18,10 @@ public struct Parser {
         return nil
     }
     
+    internal static var anyPropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        return colorPropertyParser <|> fontPropertyParser <|> boolPropertyParser
+    }
+    
     /// Parser for color properties.
     internal static var colorPropertyParser: FootlessParser.Parser<Character, SwashValue> {
         let parser = propertyParser(with: FootlessParser.Parser<Character, ColorDescriptor>.colorValueParser)
