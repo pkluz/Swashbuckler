@@ -8,8 +8,6 @@
 
 import FootlessParser
 
-fileprivate let decimalSeparator = "." as Character
-
 extension FootlessParser.Parser {
     
     /// Parser for boolean values.

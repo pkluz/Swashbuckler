@@ -8,6 +8,8 @@
 
 import FootlessParser
 
+internal typealias ColorDescriptor = (r: UInt8, g: UInt8, b: UInt8, a: UInt8)
+
 extension FootlessParser.Parser {
     
     /// Parser for color values.

@@ -8,6 +8,8 @@
 
 import FootlessParser
 
+internal typealias FontDescriptor = (size: Float, family: String)
+
 extension FootlessParser.Parser {
     
     // Parser for fonts values.

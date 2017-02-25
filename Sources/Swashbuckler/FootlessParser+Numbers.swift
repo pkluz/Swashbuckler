@@ -12,6 +12,12 @@ fileprivate let decimalSeparator = "." as Character
 
 extension FootlessParser.Parser {
     
+    /// Praser for point values.
+    internal static var pointValueParser: FootlessParser.Parser<Character, Float> {
+        let parser = oneOrMore(oneOf("1234567890")) <* string("pt")
+        return { Float($0)! } <^> parser
+    }
+    
     /// Parser for decimal numbers.
     internal static var decimalParser: FootlessParser.Parser<Character,Float> {
         let negativeSign = "-" as Character

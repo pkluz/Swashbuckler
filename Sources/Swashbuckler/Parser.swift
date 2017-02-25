@@ -9,17 +9,18 @@
 import Foundation
 import FootlessParser
 
-internal typealias ColorDescriptor = (r: UInt8, g: UInt8, b: UInt8, a: UInt8)
-internal typealias FontDescriptor = (size: Float, family: String)
-
 public struct Parser {
     
     public static func parse(input string: String) -> SwashValue? {
         return nil
     }
     
+    /// Combinator, parsing any property.
     internal static var anyPropertyParser: FootlessParser.Parser<Character, SwashValue> {
-        return colorPropertyParser <|> fontPropertyParser <|> boolPropertyParser
+        return colorPropertyParser <|>
+               fontPropertyParser <|>
+               sizePropertyParser <|>
+               boolPropertyParser
     }
     
     /// Parser for color properties.
@@ -31,6 +32,16 @@ public struct Parser {
                                     green: Float(components.g) / Float(255.0),
                                     blue: Float(components.b) / Float(255.0),
                                     alpha: Float(components.a) / Float(255.0))
+        }
+        
+        return transformer <^> parser
+    }
+    
+    /// Parser for size properties.
+    internal static var sizePropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        let parser = propertyParser(with: FootlessParser.Parser<Character, ColorDescriptor>.sizePropertyParser)
+        let transformer = { (id: String, size: CGSize) -> SwashValue in
+            return SwashValue.size(id: id, width: Float(size.width), height: Float(size.height))
         }
         
         return transformer <^> parser
@@ -58,6 +69,7 @@ public struct Parser {
         return transformer <^> parser
     }
     
+    /// Generic propery parser.
     internal static func propertyParser<T>(with valueParser:FootlessParser.Parser<Character, T>) -> FootlessParser.Parser<Character, (String, T)> {
         let name = FootlessParser.Parser<Character, String>.objectIdentifierParser
         return tuple <^> (zeroOrMore(whitespace) *> name <* zeroOrMore(whitespace)) <*>
