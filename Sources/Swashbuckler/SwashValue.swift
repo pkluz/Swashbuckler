@@ -9,11 +9,12 @@
 import Foundation
 
 public enum SwashValue {
-    case Block(id: String, block: [SwashValue])
-    case Font(id: String, size: Float, family: String)
-    case Color(id: String, red: Float, green: Float, blue: Float)
-    case Bool(id: String, value: Bool)
-    case Size(id: String, width: Float, Height: Float)
-    case Position(id: String, x: Float, y: Float)
-    case Rect(id: String, x: Float, y: Float, width: Float, height: Float)
+    case styleClass(id: String, values: [SwashValue])
+    case styleBlock(id: String, values: [SwashValue])
+    case font(id: String, size: Float, family: String)
+    case color(id: String, red: Float, green: Float, blue: Float, alpha: Float)
+    case bool(id: String, value: Bool)
+    case position(id: String, x: Float, y: Float)
+    case size(id: String, width: Float, Height: Float)
+    case rect(id: String, x: Float, y: Float, width: Float, height: Float)
 }

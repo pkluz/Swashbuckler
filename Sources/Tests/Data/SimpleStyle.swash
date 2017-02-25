@@ -1,7 +1,3 @@
 .feedViewController
     backgroundColor #FF00CC
     defaultFont 12pt 'Helvetica-Neue'
-
-    #headerView
-        isTranslucent true
-        titleFont @defaultFont

@@ -2,6 +2,5 @@
     backgroundColor #FF00CC
     defaultFont 12pt 'Helvetica-Neue'
 
-    #headerView
+    #feedHeaderView
         isTranslucent true
-        titleFont @defaultFont

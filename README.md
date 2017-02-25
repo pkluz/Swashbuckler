@@ -43,7 +43,7 @@ Blocks can be nested, to allow for hierarchical structuring of your styles. Note
     backgroundColor #FF00CC
     defaultFont 12pt 'Helvetica-Neue'
     
-    #feedHeaderView
+    #headerView
         isTranslucent true
 ```
 
@@ -52,14 +52,14 @@ The above swashbuckler stylesheet will emit the following Swift code on iOS:
 ```swift
 public struct FeedViewControllerStyle {
 
-    public struct FeedHeaderViewStyle {
+    public struct HeaderViewStyle {
         public var isTranslucent: Bool {
             return true
         }
     }
 
-    public var feedHeaderViewStyle: FeedHeaderViewStyle {
-        return FeedHeaderViewStyle()
+    public var headerViewStyle: HeaderViewStyle {
+        return HeaderViewStyle()
     }
 
     public var backgroundColor: UIColor {

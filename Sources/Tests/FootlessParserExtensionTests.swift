@@ -1,5 +1,5 @@
 //
-//  ParserExtensionTests.swift
+//  FootlessParserExtensionTests.swift
 //  Tests
 //
 //  Created by Philip Kluz on 2017-02-20.
@@ -7,13 +7,13 @@
 //
 
 import XCTest
-import FootlessParser
+@testable import FootlessParser
 @testable import Swashbuckler
 
-class ParserExtensionTests: XCTestCase {
+class FootlessParserExtensionTests: XCTestCase {
     
     func testDecimalParser() {
-        let parser = Parser<Character, Float>.decimalParser()
+        let parser = FootlessParser.Parser<Character, Float>.decimalParser
 
         let output = try! parse(parser, "0.12")
         XCTAssert(output == 0.12)
@@ -47,7 +47,7 @@ class ParserExtensionTests: XCTestCase {
     }
     
     func testUnsignedIntegerParser() {
-        let parser = Parser<Character, UInt>.unsignedIntegerParser()
+        let parser = FootlessParser.Parser<Character, UInt>.unsignedIntegerParser
         
         let output = try! parse(parser, "12")
         XCTAssert(output == 12)
@@ -61,7 +61,7 @@ class ParserExtensionTests: XCTestCase {
     
     func testHexComponentsParser() {
         do {
-            let parser = Parser<Character, ColorComponents>.hexComponentsParser()
+            let parser = FootlessParser.Parser<Character, ColorDescriptor>.hexValueParser
             let valid1 = try parse(parser, "#FF00FFFF")
             XCTAssert(valid1.r == 255)
             XCTAssert(valid1.g == 0)
@@ -89,7 +89,7 @@ class ParserExtensionTests: XCTestCase {
     
     func testRGBAComponentsParser() {
         do {
-            let parser = Parser<Character, ColorComponents>.rgbaComponentsParser()
+            let parser = FootlessParser.Parser<Character, ColorDescriptor>.rgbaValueParser
             let string = "rgba(255,  0, 12, 255)"
             let output = try parse(parser, string)
             XCTAssert(output.r == 255)
