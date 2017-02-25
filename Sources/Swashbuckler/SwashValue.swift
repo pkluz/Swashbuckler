@@ -14,7 +14,7 @@ public enum SwashValue {
     case font(id: String, size: Float, family: String)
     case color(id: String, red: Float, green: Float, blue: Float, alpha: Float)
     case bool(id: String, value: Bool)
-    case position(id: String, x: Float, y: Float)
+    case number(id: String, value: Float)
     case size(id: String, width: Float, height: Float)
     case rect(id: String, x: Float, y: Float, width: Float, height: Float)
 }

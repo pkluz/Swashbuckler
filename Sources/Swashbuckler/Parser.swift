@@ -21,6 +21,7 @@ public struct Parser {
                fontPropertyParser <|>
                rectPropertyParser <|>
                sizePropertyParser <|>
+               numberPropertyParser <|>
                boolPropertyParser
     }
     
@@ -33,6 +34,16 @@ public struct Parser {
                                     green: Float(components.g) / Float(255.0),
                                     blue: Float(components.b) / Float(255.0),
                                     alpha: Float(components.a) / Float(255.0))
+        }
+        
+        return transformer <^> parser
+    }
+    
+    /// Parser for number properties.
+    internal static var numberPropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        let parser = propertyParser(with: FootlessParser.Parser<Character, Float>.pointValueParser)
+        let transformer = { (id: String, value: Float) -> SwashValue in
+            return SwashValue.number(id: id, value: value)
         }
         
         return transformer <^> parser

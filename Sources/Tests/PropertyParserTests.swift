@@ -24,6 +24,8 @@ class PropertyParserTests: XCTestCase {
             XCTAssert(true)
         case .color(_):
             XCTAssert(true)
+        case .number(_):
+            XCTAssert(true)
         case .size(_):
             XCTAssert(true)
         case .rect(_):
@@ -39,7 +41,8 @@ class PropertyParserTests: XCTestCase {
                            "backgroundColor rgba(120, 99, 0, 255)",
                            "textColor #ff00ff",
                            "frame 15pt 15pt 500pt 500pt",
-                           "origin 15pt 15pt" ]
+                           "origin 15pt 15pt",
+                           "someValue 15pt"]
         let index = Int(arc4random_uniform(3))
         return properties[index]
     }
