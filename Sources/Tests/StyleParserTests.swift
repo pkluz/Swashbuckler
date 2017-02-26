@@ -32,8 +32,33 @@ class StyleParserTests: XCTestCase {
         }
     }
     
+    func testNestedStyle() {
+        let input = nestedStyle()
+        let preprocessedInput = Preprocessor.run(input: input)
+        let parser = Parser.rootParser
+        let output = try! parse(parser, preprocessedInput)
+        
+        switch output {
+        case .classBlock(let id, let value):
+            XCTAssert(id == "feedViewController")
+            switch value {
+            case .block(value: let values):
+                XCTAssert(values.count == 3)
+            default:
+                XCTAssert(false)
+            }
+        default:
+            XCTAssert(false)
+        }
+    }
+    
     func simpleStyle() -> String {
         let path = Bundle(for: StyleParserTests.self).path(forResource: "SimpleStyle", ofType: "swash")!
+        return try! String(contentsOfFile: path)
+    }
+    
+    func nestedStyle() -> String {
+        let path = Bundle(for: StyleParserTests.self).path(forResource: "NestedStyle", ofType: "swash")!
         return try! String(contentsOfFile: path)
     }
 }

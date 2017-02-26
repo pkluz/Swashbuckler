@@ -27,15 +27,16 @@ public struct Parser {
         let closing = string(Preprocessor.closingDelimiter) <* optional(zeroOrMore(newline))
         let blockIdentifier: FootlessParser.Parser<Character, BlockDescriptor> = .blockIdentifierParser
         
-        let transformedBlockParser = tuple <^> (blockIdentifier <* newline <* opening) <*> lazy(blockParser()) <* closing
-        let parser = multilinePropertyParser <|> ({ (descriptor: BlockDescriptor, value: SwashValue) -> SwashValue in
+        let transformedBlockParser = { (descriptor: BlockDescriptor, value: SwashValue) -> SwashValue in
             switch descriptor.type {
             case .classBlock:
                 return SwashValue.classBlock(id: descriptor.id, value: value)
             case .idBlock:
                 return SwashValue.idBlock(id: descriptor.id, value: value)
             }
-        } <^> transformedBlockParser)
+        } <^> (tuple <^> (blockIdentifier <* newline <* opening) <*> lazy(blockParser()) <* closing)
+        
+        let parser = multilinePropertyParser <|> transformedBlockParser
         return parser
     }
     

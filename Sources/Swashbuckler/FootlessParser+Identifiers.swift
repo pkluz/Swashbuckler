@@ -19,14 +19,14 @@ extension FootlessParser.Parser {
     
     /// Parser for a property identifier.
     internal static var propertyIdentifierParser: FootlessParser.Parser<Character, String> {
-        return extend <^> (char(CharacterSet.letters, name: "letters")) <*>
+        return extend <^> ((not(".") <|> not("#")) *> char(CharacterSet.letters, name: "letters")) <*>
                            zeroOrMore(alphanumeric) <*
                            zeroOrMore(whitespace)
     }
     
     /// Parser for a block identifier.
     internal static var blockIdentifierParser: FootlessParser.Parser<Character, BlockDescriptor> {
-        let parser = tuple <^> string(".") <*> (extend <^> char(CharacterSet.letters, name: "letters") <*> zeroOrMore(alphanumeric))
+        let parser = tuple <^> (string(".") <|> string("#")) <*> (extend <^> char(CharacterSet.letters, name: "letters") <*> zeroOrMore(alphanumeric))
         return { (type: $0 == "." ? .classBlock : .idBlock, id: $1) } <^> parser
     }
 }
