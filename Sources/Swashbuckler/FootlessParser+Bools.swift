@@ -13,7 +13,7 @@ extension FootlessParser.Parser {
     /// Parser for boolean values.
     internal static var boolValueParser: FootlessParser.Parser<Character, Bool> {
         let trueOrFalse = string("true") <|> string("false")
-        let parser = zeroOrMore(whitespace) *> trueOrFalse <* zeroOrMore(whitespace)
+        let parser = zeroOrMore(whitespace) *> trueOrFalse
         
         return { $0 == "true" } <^> parser
     }

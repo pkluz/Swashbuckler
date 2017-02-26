@@ -13,7 +13,7 @@ extension FootlessParser.Parser {
     /// Parser for reference values.
     internal static var referenceValueParser: FootlessParser.Parser<Character, String> {
         let referenceName = string("@") *> FootlessParser.Parser.propertyIdentifierParser
-        let parser = zeroOrMore(whitespace) *> referenceName <* zeroOrMore(whitespace)
+        let parser = referenceName <* zeroOrMore(whitespace)
         return  parser
     }
 }

@@ -13,10 +13,10 @@ extension FootlessParser.Parser {
     /// Parser for rect values
     internal static var rectPropertyParser: FootlessParser.Parser<Character, CGRect> {
         let pointParser = FootlessParser.Parser.pointValueParser
-        let rectParser = tuple <^> (pointParser <* oneOrMore(whitespace)) <*>
-                                     (pointParser <* oneOrMore(whitespace)) <*>
-                                     (pointParser <* oneOrMore(whitespace)) <*>
-                                      pointParser
+        let rectParser = tuple <^> (pointParser <* whitespace) <*>
+                                   (pointParser <* whitespace) <*>
+                                   (pointParser <* whitespace) <*>
+                                    pointParser
         return { CGRect(x: CGFloat($0),
                         y: CGFloat($1),
                         width: CGFloat($2),

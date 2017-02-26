@@ -45,15 +45,13 @@ extension FootlessParser.Parser {
         let closeParenParser = char(")" as Character)
         let delimiter = zeroOrMore(whitespace) *> char(",") *> zeroOrMore(whitespace)
         let integerParser = FootlessParser.Parser.unsignedIntegerParser
-        let parser = zeroOrMore(whitespace) *>
-                     string(prefix) *>
+        let parser = string(prefix) *>
                      openParenParser *>
                      (tuple <^> (integerParser <* delimiter) <*>
                                 (integerParser <* delimiter) <*>
                                 (integerParser <* delimiter) <*>
                                  integerParser ) <*
-                      closeParenParser <*
-                      zeroOrMore(whitespace)
+                      closeParenParser
         
         return { components -> ColorDescriptor in
             return (r: UInt8(components.0),

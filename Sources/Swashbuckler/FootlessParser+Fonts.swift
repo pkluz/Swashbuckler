@@ -15,15 +15,9 @@ extension FootlessParser.Parser {
     // Parser for fonts values.
     internal static var fontValueParser: FootlessParser.Parser<Character, FontDescriptor> {
         let quote = "'" as Character
-        let sizeParser = { Float($0) ?? 0.0 } <^> zeroOrMore(oneOf("1234567890")) <*
-                                                  string("pt") <*
-                                                  oneOrMore(whitespace)
-        let fontNameParser = zeroOrMore(whitespace) *>
-                             token(quote) *>
-                             zeroOrMore(not(quote)) <*
-                             token(quote) <*
-                             zeroOrMore(whitespace)
-        let parser = tuple <^> sizeParser <*> fontNameParser
+        let sizeParser = unsignedDecimalParser <* string("pt")
+        let fontNameParser = token(quote) *> zeroOrMore(not(quote)) <* token(quote)
+        let parser = tuple <^> (sizeParser <* whitespace) <*> fontNameParser
         
         return { (size: $0, family: $1) } <^> parser
     }
