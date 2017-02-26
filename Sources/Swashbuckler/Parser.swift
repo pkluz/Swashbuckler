@@ -51,6 +51,7 @@ public struct Parser {
                rectPropertyParser <|>
                sizePropertyParser <|>
                numberPropertyParser <|>
+               referencePropertyParser <|>
                blockPropertyParser
     }
     

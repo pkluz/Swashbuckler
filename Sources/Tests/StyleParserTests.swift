@@ -76,14 +76,65 @@ class StyleParserTests: XCTestCase {
         }
     }
     
+    func testReferencedStyle() {
+        let input = referencedStyle()
+        let preprocessedInput = Preprocessor.run(input: input)
+        let parser = Parser.rootParser
+        let output = try! parse(parser, preprocessedInput)
+        
+        switch output {
+        case .block(let values):
+            XCTAssert(values.count == 1)
+            switch values.first! {
+            case .classBlock(let id, let value):
+                XCTAssert(id == "feedViewController")
+                switch value {
+                case .block(value: let values):
+                    XCTAssert(values.count == 3)
+                    switch values.last! {
+                    case .idBlock(let id, let blockValue):
+                        XCTAssert(id == "headerView")
+                        switch blockValue {
+                        case .block(let blockValues):
+                            XCTAssert(blockValues.count == 2)
+                            switch blockValues.last! {
+                            case .reference(let id, let referenceId):
+                                XCTAssert(id == "titleFont")
+                                XCTAssert(referenceId == "defaultFont")
+                            default:
+                                XCTAssert(false)
+                            }
+                        default:
+                            XCTAssert(false)
+                        }
+                    default:
+                        XCTAssert(false)
+                    }
+                default:
+                    XCTAssert(false)
+                }
+            default:
+                XCTAssert(false)
+            }
+        default:
+            XCTAssert(false)
+        }
+    }
     
     func simpleStyle() -> String {
-        let path = Bundle(for: StyleParserTests.self).path(forResource: "SimpleStyle", ofType: "swash")!
-        return try! String(contentsOfFile: path)
+        return StyleParserTests.style(named: "SimpleStyle")
     }
     
     func nestedStyle() -> String {
-        let path = Bundle(for: StyleParserTests.self).path(forResource: "NestedStyle", ofType: "swash")!
+        return StyleParserTests.style(named: "NestedStyle")
+    }
+    
+    func referencedStyle() -> String {
+        return StyleParserTests.style(named: "ReferencedStyle")
+    }
+    
+    static func style(named name: String) -> String {
+        let path = Bundle(for: StyleParserTests.self).path(forResource: name, ofType: "swash")!
         return try! String(contentsOfFile: path)
     }
 }

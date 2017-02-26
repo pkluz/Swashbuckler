@@ -21,7 +21,7 @@
 		F90DDF251E630D4700929D0F /* FootlessParser+References.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF241E630D4700929D0F /* FootlessParser+References.swift */; };
 		F9341FEA1E60C1C800DBC959 /* SimpleStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F9A6BA9F1E6076E900907425 /* SimpleStyle.swash */; };
 		F96644E31E5BB370007E22D0 /* NestedStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E01E5BB370007E22D0 /* NestedStyle.swash */; };
-		F96644E41E5BB370007E22D0 /* VariableStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E11E5BB370007E22D0 /* VariableStyle.swash */; };
+		F96644E41E5BB370007E22D0 /* ReferencedStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E11E5BB370007E22D0 /* ReferencedStyle.swash */; };
 		F97724121E5ADAAA00528180 /* Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97724081E5ADAAA00528180 /* Swashbuckler.framework */; };
 		F97724291E5ADAE900528180 /* StyleParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724241E5ADAE900528180 /* StyleParserTests.swift */; };
 		F977242B1E5ADAE900528180 /* FootlessParserExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724271E5ADAE900528180 /* FootlessParserExtensionTests.swift */; };
@@ -66,7 +66,7 @@
 		F90DDF221E619EAD00929D0F /* PreprocessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreprocessorTests.swift; path = Tests/PreprocessorTests.swift; sourceTree = SOURCE_ROOT; };
 		F90DDF241E630D4700929D0F /* FootlessParser+References.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FootlessParser+References.swift"; sourceTree = "<group>"; };
 		F96644E01E5BB370007E22D0 /* NestedStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NestedStyle.swash; sourceTree = "<group>"; };
-		F96644E11E5BB370007E22D0 /* VariableStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VariableStyle.swash; sourceTree = "<group>"; };
+		F96644E11E5BB370007E22D0 /* ReferencedStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReferencedStyle.swash; sourceTree = "<group>"; };
 		F97724081E5ADAAA00528180 /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97724111E5ADAAA00528180 /* SwashbucklerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwashbucklerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97724241E5ADAE900528180 /* StyleParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleParserTests.swift; path = Tests/StyleParserTests.swift; sourceTree = SOURCE_ROOT; };
@@ -189,7 +189,7 @@
 			children = (
 				F9A6BA9F1E6076E900907425 /* SimpleStyle.swash */,
 				F96644E01E5BB370007E22D0 /* NestedStyle.swash */,
-				F96644E11E5BB370007E22D0 /* VariableStyle.swash */,
+				F96644E11E5BB370007E22D0 /* ReferencedStyle.swash */,
 			);
 			name = Data;
 			path = Tests/Data;
@@ -336,7 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F96644E41E5BB370007E22D0 /* VariableStyle.swash in Resources */,
+				F96644E41E5BB370007E22D0 /* ReferencedStyle.swash in Resources */,
 				F96644E31E5BB370007E22D0 /* NestedStyle.swash in Resources */,
 				F9341FEA1E60C1C800DBC959 /* SimpleStyle.swash in Resources */,
 			);
