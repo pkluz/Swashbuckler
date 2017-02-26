@@ -35,15 +35,37 @@ class PropertyParserTests: XCTestCase {
         }
     }
     
+    func testMultipleProperties() {
+        let input = multipleProperties()
+        let parser = Parser.multilinePropertyParser
+        let output = try! parse(parser, input)
+        
+        switch output {
+        case .block(_):
+            XCTAssert(true)
+        default:
+            XCTAssert(false)
+        }
+    }
+    
+    func properties() -> [String] {
+        return [ "defaultFont 12pt 'Helvetica'",
+                 "isTranslucent true",
+                 "backgroundColor rgba(120, 99, 0, 255)",
+                 "textColor #ff00ff",
+                 "frame 15pt 15pt 500pt 500pt",
+                 "origin 15pt 15pt",
+                 "someValue 15pt"]
+    }
+    
     func randomProperty() -> String {
-        let properties = [ "defaultFont 12pt 'Helvetica'",
-                           "isTranslucent true",
-                           "backgroundColor rgba(120, 99, 0, 255)",
-                           "textColor #ff00ff",
-                           "frame 15pt 15pt 500pt 500pt",
-                           "origin 15pt 15pt",
-                           "someValue 15pt"]
+        let properties = self.properties()
         let index = Int(arc4random_uniform(3))
         return properties[index]
+    }
+    
+    func multipleProperties() -> String {
+        let properties = self.properties()
+        return properties.joined(separator: "\n")
     }
 }

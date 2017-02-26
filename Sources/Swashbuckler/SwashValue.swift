@@ -8,9 +8,11 @@
 
 import Foundation
 
-public enum SwashValue {
-    case styleClass(id: String, values: [SwashValue])
-    case styleBlock(id: String, values: [SwashValue])
+public indirect enum SwashValue {
+    case root(value: SwashValue)
+    case block(value: [SwashValue])
+    case classBlock(id: String, value: SwashValue)
+    case idBlock(id: String, value: SwashValue)
     case font(id: String, size: Float, family: String)
     case color(id: String, red: Float, green: Float, blue: Float, alpha: Float)
     case bool(id: String, value: Bool)

@@ -15,6 +15,34 @@ public struct Parser {
         return nil
     }
     
+    internal static var rootParser: FootlessParser.Parser<Character, SwashValue> {
+        let opening = string(Preprocessor.openingDelimiter) <* newline
+        let closing = string(Preprocessor.closingDelimiter) <* optional(zeroOrMore(newline))
+        let parser = opening *> blockParser() <* closing
+        return parser
+    }
+    
+    internal static func blockParser() -> FootlessParser.Parser<Character, SwashValue> {
+        let opening = string(Preprocessor.openingDelimiter) <* newline
+        let closing = string(Preprocessor.closingDelimiter) <* optional(zeroOrMore(newline))
+        let blockIdentifier: FootlessParser.Parser<Character, BlockDescriptor> = .blockIdentifierParser
+        
+        let transformedBlockParser = tuple <^> (blockIdentifier <* newline <* opening) <*> lazy(blockParser()) <* closing
+        let parser = multilinePropertyParser <|> ({ (descriptor: BlockDescriptor, value: SwashValue) -> SwashValue in
+            switch descriptor.type {
+            case .classBlock:
+                return SwashValue.classBlock(id: descriptor.id, value: value)
+            case .idBlock:
+                return SwashValue.idBlock(id: descriptor.id, value: value)
+            }
+        } <^> transformedBlockParser)
+        return parser
+    }
+    
+    internal static var multilinePropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        return { SwashValue.block(value: $0) } <^> oneOrMore(anyPropertyParser)
+    }
+    
     /// Combinator, parsing any property.
     internal static var anyPropertyParser: FootlessParser.Parser<Character, SwashValue> {
         // Note: The order in which these are tried is important. Consider syntax of properties before modifying this.
@@ -98,7 +126,7 @@ public struct Parser {
     
     /// Generic propery parser.
     internal static func propertyParser<T>(with valueParser:FootlessParser.Parser<Character, T>) -> FootlessParser.Parser<Character, (String, T)> {
-        let name = FootlessParser.Parser<Character, String>.objectIdentifierParser
+        let name = FootlessParser.Parser<Character, String>.propertyIdentifierParser
         return tuple <^> (zeroOrMore(whitespace) *> name <* zeroOrMore(whitespace)) <*>
                           valueParser <*
                           zeroOrMore(whitespace) <*

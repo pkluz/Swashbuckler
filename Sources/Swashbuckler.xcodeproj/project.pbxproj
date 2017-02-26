@@ -17,11 +17,12 @@
 		F90DDF1D1E61874D00929D0F /* FootlessParser+Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF1C1E61874D00929D0F /* FootlessParser+Rects.swift */; };
 		F90DDF1F1E61898000929D0F /* RectParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF1E1E61898000929D0F /* RectParserTests.swift */; };
 		F90DDF211E61905A00929D0F /* NumberParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF201E61905A00929D0F /* NumberParserTests.swift */; };
+		F90DDF231E619EAD00929D0F /* PreprocessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90DDF221E619EAD00929D0F /* PreprocessorTests.swift */; };
 		F9341FEA1E60C1C800DBC959 /* SimpleStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F9A6BA9F1E6076E900907425 /* SimpleStyle.swash */; };
 		F96644E31E5BB370007E22D0 /* NestedStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E01E5BB370007E22D0 /* NestedStyle.swash */; };
 		F96644E41E5BB370007E22D0 /* VariableStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E11E5BB370007E22D0 /* VariableStyle.swash */; };
 		F97724121E5ADAAA00528180 /* Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97724081E5ADAAA00528180 /* Swashbuckler.framework */; };
-		F97724291E5ADAE900528180 /* PreprocessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724241E5ADAE900528180 /* PreprocessorTests.swift */; };
+		F97724291E5ADAE900528180 /* StyleParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724241E5ADAE900528180 /* StyleParserTests.swift */; };
 		F977242B1E5ADAE900528180 /* FootlessParserExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97724271E5ADAE900528180 /* FootlessParserExtensionTests.swift */; };
 		F97724321E5ADAF400528180 /* Preprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977242C1E5ADAF400528180 /* Preprocessor.swift */; };
 		F97724341E5ADAF400528180 /* Swashbuckler.h in Headers */ = {isa = PBXBuildFile; fileRef = F977242F1E5ADAF400528180 /* Swashbuckler.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,11 +62,12 @@
 		F90DDF1C1E61874D00929D0F /* FootlessParser+Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FootlessParser+Rects.swift"; sourceTree = "<group>"; };
 		F90DDF1E1E61898000929D0F /* RectParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectParserTests.swift; path = Tests/RectParserTests.swift; sourceTree = SOURCE_ROOT; };
 		F90DDF201E61905A00929D0F /* NumberParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberParserTests.swift; path = Tests/NumberParserTests.swift; sourceTree = SOURCE_ROOT; };
+		F90DDF221E619EAD00929D0F /* PreprocessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreprocessorTests.swift; path = Tests/PreprocessorTests.swift; sourceTree = SOURCE_ROOT; };
 		F96644E01E5BB370007E22D0 /* NestedStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NestedStyle.swash; sourceTree = "<group>"; };
 		F96644E11E5BB370007E22D0 /* VariableStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VariableStyle.swash; sourceTree = "<group>"; };
 		F97724081E5ADAAA00528180 /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97724111E5ADAAA00528180 /* SwashbucklerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwashbucklerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F97724241E5ADAE900528180 /* PreprocessorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreprocessorTests.swift; path = Tests/PreprocessorTests.swift; sourceTree = SOURCE_ROOT; };
+		F97724241E5ADAE900528180 /* StyleParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleParserTests.swift; path = Tests/StyleParserTests.swift; sourceTree = SOURCE_ROOT; };
 		F97724261E5ADAE900528180 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97724271E5ADAE900528180 /* FootlessParserExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FootlessParserExtensionTests.swift; path = Tests/FootlessParserExtensionTests.swift; sourceTree = SOURCE_ROOT; };
 		F977242C1E5ADAF400528180 /* Preprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preprocessor.swift; sourceTree = "<group>"; };
@@ -163,7 +165,8 @@
 		F97724151E5ADAAA00528180 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F97724241E5ADAE900528180 /* PreprocessorTests.swift */,
+				F97724241E5ADAE900528180 /* StyleParserTests.swift */,
+				F90DDF221E619EAD00929D0F /* PreprocessorTests.swift */,
 				F90DDF151E61785B00929D0F /* PropertyParserTests.swift */,
 				F9DDFE2B1E616C2600369260 /* FontParserTests.swift */,
 				F90DDF191E617B5500929D0F /* SizeParserTests.swift */,
@@ -439,10 +442,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F97724291E5ADAE900528180 /* PreprocessorTests.swift in Sources */,
+				F97724291E5ADAE900528180 /* StyleParserTests.swift in Sources */,
 				F90DDF1B1E617BCC00929D0F /* SizeParserTests.swift in Sources */,
 				F90DDF211E61905A00929D0F /* NumberParserTests.swift in Sources */,
 				F90DDF161E61785B00929D0F /* PropertyParserTests.swift in Sources */,
+				F90DDF231E619EAD00929D0F /* PreprocessorTests.swift in Sources */,
 				F977242B1E5ADAE900528180 /* FootlessParserExtensionTests.swift in Sources */,
 				F90DDF141E61772900929D0F /* BoolParserTests.swift in Sources */,
 				F9A6BAA71E60BF5000907425 /* ColorParserTests.swift in Sources */,

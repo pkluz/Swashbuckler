@@ -10,8 +10,8 @@ import Foundation
 
 public struct Preprocessor {
     
-    fileprivate static let openingDelimiter = "{"
-    fileprivate static let closingDelimiter = "}"
+    internal static let openingDelimiter = "{"
+    internal static let closingDelimiter = "}"
     fileprivate static let tabAsSpaces = "    "
     
     /// Runs the preprocessor on a given input string.
@@ -21,7 +21,8 @@ public struct Preprocessor {
                           .filter { !$0.isEmpty }
         let processed = [ openingDelimiter ] + insertDelimiters(lines: lines, stack: [0])
         
-        return processed.joined(separator: "\n")
+        return processed.map { $0.trimmingCharacters(in: CharacterSet.whitespaces) }
+                        .joined(separator: "\n")
     }
     
     /// Inserts block delimiters into a tab and space aligned file.
