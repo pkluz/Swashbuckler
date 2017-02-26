@@ -124,6 +124,16 @@ public struct Parser {
         return transformer <^> parser
     }
     
+    /// Parser for reference properties.
+    internal static var referencePropertyParser: FootlessParser.Parser<Character, SwashValue> {
+        let parser = propertyParser(with: FootlessParser.Parser<Character, String>.referenceValueParser)
+        let transformer = { (id: String, value: String) -> SwashValue in
+            return SwashValue.reference(id: id, referencedId: value)
+        }
+        
+        return transformer <^> parser
+    }
+    
     /// Generic propery parser.
     internal static func propertyParser<T>(with valueParser:FootlessParser.Parser<Character, T>) -> FootlessParser.Parser<Character, (String, T)> {
         let name = FootlessParser.Parser<Character, String>.propertyIdentifierParser

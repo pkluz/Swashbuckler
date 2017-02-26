@@ -19,4 +19,5 @@ public indirect enum SwashValue {
     case number(id: String, value: Float)
     case size(id: String, width: Float, height: Float)
     case rect(id: String, x: Float, y: Float, width: Float, height: Float)
+    case reference(id: String, referencedId: String)
 }
