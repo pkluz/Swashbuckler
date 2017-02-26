@@ -19,11 +19,17 @@ class StyleParserTests: XCTestCase {
         let output = try! parse(parser, preprocessedInput)
         
         switch output {
-        case .classBlock(let id, let value):
-            XCTAssert(id == "feedViewController")
-            switch value {
-            case .block(value: let values):
-                XCTAssert(values.count == 2)
+        case .block(let values):
+            XCTAssert(values.count == 1)
+            switch values.first! {
+            case .classBlock(let id, let value):
+                XCTAssert(id == "feedViewController")
+                switch value {
+                case .block(value: let values):
+                    XCTAssert(values.count == 2)
+                default:
+                    XCTAssert(false)
+                }
             default:
                 XCTAssert(false)
             }
@@ -39,11 +45,29 @@ class StyleParserTests: XCTestCase {
         let output = try! parse(parser, preprocessedInput)
         
         switch output {
-        case .classBlock(let id, let value):
-            XCTAssert(id == "feedViewController")
-            switch value {
-            case .block(value: let values):
-                XCTAssert(values.count == 3)
+        case .block(let values):
+            XCTAssert(values.count == 1)
+            switch values.first! {
+            case .classBlock(let id, let value):
+                XCTAssert(id == "feedViewController")
+                switch value {
+                case .block(value: let values):
+                    XCTAssert(values.count == 3)
+                    switch values.last! {
+                    case .idBlock(let id, let blockValue):
+                        XCTAssert(id == "feedHeaderView")
+                        switch blockValue {
+                        case .block(let blockValues):
+                            XCTAssert(blockValues.count == 1)
+                        default:
+                            XCTAssert(false)
+                        }
+                    default:
+                        XCTAssert(false)
+                    }
+                default:
+                    XCTAssert(false)
+                }
             default:
                 XCTAssert(false)
             }
@@ -51,6 +75,7 @@ class StyleParserTests: XCTestCase {
             XCTAssert(false)
         }
     }
+    
     
     func simpleStyle() -> String {
         let path = Bundle(for: StyleParserTests.self).path(forResource: "SimpleStyle", ofType: "swash")!

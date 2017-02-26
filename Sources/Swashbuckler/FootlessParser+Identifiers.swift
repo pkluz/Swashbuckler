@@ -19,7 +19,7 @@ extension FootlessParser.Parser {
     
     /// Parser for a property identifier.
     internal static var propertyIdentifierParser: FootlessParser.Parser<Character, String> {
-        return extend <^> ((not(".") <|> not("#")) *> char(CharacterSet.letters, name: "letters")) <*>
+        return extend <^> (char(CharacterSet.letters, name: "letters")) <*>
                            zeroOrMore(alphanumeric) <*
                            zeroOrMore(whitespace)
     }

@@ -18,25 +18,23 @@ public struct Parser {
     internal static var rootParser: FootlessParser.Parser<Character, SwashValue> {
         let opening = string(Preprocessor.openingDelimiter) <* newline
         let closing = string(Preprocessor.closingDelimiter) <* optional(zeroOrMore(newline))
-        let parser = opening *> blockParser() <* closing
+        let parser = opening *> multilinePropertyParser <* closing
         return parser
     }
-    
-    internal static func blockParser() -> FootlessParser.Parser<Character, SwashValue> {
+        
+    internal static var blockPropertyParser: FootlessParser.Parser<Character, SwashValue> {
         let opening = string(Preprocessor.openingDelimiter) <* newline
-        let closing = string(Preprocessor.closingDelimiter) <* optional(zeroOrMore(newline))
+        let closing = string(Preprocessor.closingDelimiter) <* optional(newline)
         let blockIdentifier: FootlessParser.Parser<Character, BlockDescriptor> = .blockIdentifierParser
         
-        let transformedBlockParser = { (descriptor: BlockDescriptor, value: SwashValue) -> SwashValue in
+        let parser = { (descriptor: BlockDescriptor, value: SwashValue) -> SwashValue in
             switch descriptor.type {
             case .classBlock:
                 return SwashValue.classBlock(id: descriptor.id, value: value)
             case .idBlock:
                 return SwashValue.idBlock(id: descriptor.id, value: value)
             }
-        } <^> (tuple <^> (blockIdentifier <* newline <* opening) <*> lazy(blockParser()) <* closing)
-        
-        let parser = multilinePropertyParser <|> transformedBlockParser
+        } <^> (tuple <^> (blockIdentifier <* newline <* opening) <*> lazy(multilinePropertyParser) <* closing)
         return parser
     }
     
@@ -52,7 +50,8 @@ public struct Parser {
                boolPropertyParser <|>
                rectPropertyParser <|>
                sizePropertyParser <|>
-               numberPropertyParser
+               numberPropertyParser <|>
+               blockPropertyParser
     }
     
     /// Parser for color properties.
@@ -128,9 +127,6 @@ public struct Parser {
     /// Generic propery parser.
     internal static func propertyParser<T>(with valueParser:FootlessParser.Parser<Character, T>) -> FootlessParser.Parser<Character, (String, T)> {
         let name = FootlessParser.Parser<Character, String>.propertyIdentifierParser
-        return tuple <^> (zeroOrMore(whitespace) *> name <* zeroOrMore(whitespace)) <*>
-                          valueParser <*
-                          zeroOrMore(whitespace) <*
-                          optional(newline)
+        return tuple <^> (name <* zeroOrMore(whitespace)) <*> (valueParser <* optional(newline))
     }
 }
