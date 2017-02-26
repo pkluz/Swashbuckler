@@ -8,10 +8,16 @@
 
 import Foundation
 import FootlessParser
+import Result
+
+public enum SwashbucklerError: Error {
+    case parserError(underlying: Error)
+}
 
 public struct Swashbuckler {
 
-//    public func parse(string input: String) -> SwashValue {
-//        
-//    }
+    public func run(input: String) -> Result<SwashValue, SwashbucklerError> {
+        let preprocessedInput = Preprocessor.run(input: input)
+        return Parser.parse(input: preprocessedInput)
+    }
 }

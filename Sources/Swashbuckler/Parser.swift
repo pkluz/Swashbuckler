@@ -8,11 +8,19 @@
 
 import Foundation
 import FootlessParser
+import Result
 
-public struct Parser {
+internal struct Parser {
     
-    public static func parse(input string: String) -> SwashValue? {
-        return nil
+    internal static func parse(input: String) -> Result<SwashValue, SwashbucklerError> {
+        let parser = Parser.rootParser
+        do {
+            let output = try FootlessParser.parse(parser, input)
+            return Result(value: output)
+        }
+        catch let error {
+            return Result(error: .parserError(underlying: error))
+        }
     }
     
     internal static var rootParser: FootlessParser.Parser<Character, SwashValue> {

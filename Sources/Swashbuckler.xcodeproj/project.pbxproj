@@ -155,8 +155,8 @@
 			children = (
 				F977242F1E5ADAF400528180 /* Swashbuckler.h */,
 				F97724301E5ADAF400528180 /* Swashbuckler.swift */,
-				F97724311E5ADAF400528180 /* SwashValue.swift */,
 				F97724371E5B93CF00528180 /* Parser.swift */,
+				F97724311E5ADAF400528180 /* SwashValue.swift */,
 				F977242C1E5ADAF400528180 /* Preprocessor.swift */,
 				F977243B1E5B941200528180 /* Extensions */,
 				F977242D1E5ADAF400528180 /* Supporting Files */,
