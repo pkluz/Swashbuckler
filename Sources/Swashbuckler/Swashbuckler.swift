@@ -16,7 +16,7 @@ public enum SwashbucklerError: Error {
 
 public struct Swashbuckler {
 
-    public func run(input: String) -> Result<SwashValue, SwashbucklerError> {
+    public static func run(input: String) -> Result<SwashValue, SwashbucklerError> {
         let preprocessedInput = Preprocessor.run(input: input)
         return Parser.parse(input: preprocessedInput)
     }

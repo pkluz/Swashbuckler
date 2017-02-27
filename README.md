@@ -90,3 +90,53 @@ extension FeedViewController {
     }
 }
 ```
+
+# References
+
+Swashbuckler has built in support for some fundamental (scoped) reference semantics. This means, instead of repeating your definitions, you can reference them. This applies to atomic elements like fonts and colors, but also entire style blocks. 
+
+```css
+.feedViewController
+    backgroundColor #FF00CC
+    defaultFont 12pt 'Helvetica-Neue'
+
+    #headerView
+        isTranslucent true
+        titleFont @defaultFont
+```
+
+The above swashbuckler stylesheet will emit the following Swift code on iOS:
+
+```swift
+public struct FeedViewControllerStyle {
+
+    public struct HeaderViewStyle {
+        public var isTranslucent: Bool {
+            return true
+        }
+
+        public var titleFont: Bool {
+            return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
+        }
+    }
+
+    public var headerViewStyle: HeaderViewStyle {
+        return HeaderViewStyle()
+	}
+
+    public var backgroundColor: UIColor {
+        return UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
+    }
+
+    public var defaultFont: UIFont {
+        return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
+    }
+}
+
+extension FeedViewController {
+    public var style: FeedViewControllerStyle {
+        return FeedViewControllerStyle()
+    }
+}
+```
+

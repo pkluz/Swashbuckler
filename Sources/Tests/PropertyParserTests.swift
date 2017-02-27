@@ -40,12 +40,7 @@ class PropertyParserTests: XCTestCase {
         let parser = Parser.multilinePropertyParser
         let output = try! parse(parser, input)
         
-        switch output {
-        case .block(_):
-            XCTAssert(true)
-        default:
-            XCTAssert(false)
-        }
+        XCTAssert(output.count == 7)
     }
     
     func properties() -> [String] {

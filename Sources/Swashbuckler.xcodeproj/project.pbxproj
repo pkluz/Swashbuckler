@@ -81,6 +81,7 @@
 		F97724311E5ADAF400528180 /* SwashValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwashValue.swift; sourceTree = "<group>"; };
 		F97724371E5B93CF00528180 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F97724391E5B940700528180 /* FootlessParser+Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FootlessParser+Numbers.swift"; sourceTree = "<group>"; };
+		F9796D6A1E640D90007AE88D /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = ../Playground.playground; sourceTree = "<group>"; };
 		F9A6BA9D1E606C0F00907425 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F9A6BA9F1E6076E900907425 /* SimpleStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleStyle.swash; sourceTree = "<group>"; };
 		F9A6BAA51E60BC1600907425 /* ColorParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorParserTests.swift; path = Tests/ColorParserTests.swift; sourceTree = SOURCE_ROOT; };
@@ -135,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				F9A6BA9D1E606C0F00907425 /* README.md */,
+				F9796D6A1E640D90007AE88D /* Playground.playground */,
 				F977240A1E5ADAAA00528180 /* Swashbuckler */,
 				F97724151E5ADAAA00528180 /* Tests */,
 				F97724091E5ADAAA00528180 /* Products */,

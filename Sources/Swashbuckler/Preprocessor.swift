@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Preprocessor {
+internal struct Preprocessor {
     
     internal static let openingDelimiter = "{"
     internal static let closingDelimiter = "}"

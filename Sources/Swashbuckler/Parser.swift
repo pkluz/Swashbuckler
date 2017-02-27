@@ -27,7 +27,7 @@ internal struct Parser {
         let opening = string(Preprocessor.openingDelimiter) <* newline
         let closing = string(Preprocessor.closingDelimiter) <* optional(zeroOrMore(newline))
         let parser = opening *> multilinePropertyParser <* closing
-        return parser
+        return { SwashValue.root(value: $0) } <^> parser
     }
         
     internal static var blockPropertyParser: FootlessParser.Parser<Character, SwashValue> {
@@ -35,19 +35,19 @@ internal struct Parser {
         let closing = string(Preprocessor.closingDelimiter) <* optional(newline)
         let blockIdentifier: FootlessParser.Parser<Character, BlockDescriptor> = .blockIdentifierParser
         
-        let parser = { (descriptor: BlockDescriptor, value: SwashValue) -> SwashValue in
+        let parser = { (descriptor: BlockDescriptor, values: [SwashValue]) -> SwashValue in
             switch descriptor.type {
             case .classBlock:
-                return SwashValue.classBlock(id: descriptor.id, value: value)
+                return SwashValue.classBlock(id: descriptor.id, values: values)
             case .idBlock:
-                return SwashValue.idBlock(id: descriptor.id, value: value)
+                return SwashValue.idBlock(id: descriptor.id, values: values)
             }
         } <^> (tuple <^> (blockIdentifier <* newline <* opening) <*> lazy(multilinePropertyParser) <* closing)
         return parser
     }
     
-    internal static var multilinePropertyParser: FootlessParser.Parser<Character, SwashValue> {
-        return { SwashValue.block(value: $0) } <^> oneOrMore(anyPropertyParser)
+    internal static var multilinePropertyParser: FootlessParser.Parser<Character, [SwashValue]> {
+        return oneOrMore(anyPropertyParser)
     }
     
     /// Combinator, parsing any property.
