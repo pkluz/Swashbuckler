@@ -85,11 +85,11 @@ class GeneratorTests: XCTestCase {
     }
     
     func colorValue() -> SwashValue {
-        return SwashValue.color(id: "backgroundColor", red: 200.0, green: 150.0, blue: 0.0, alpha: 255.0)
+        return SwashValue.color(id: "backgroundColor", red: 200.0/255.0, green: 150.0/255.0, blue: 0.0/255.0, alpha: 255.0/255.0)
     }
     
     func colorString() -> String {
-        return "public let backgroundColor = UIColor(red: 200.0/255.0, green: 150.0/255.0, blue: 0.0/255.0, alpha: 255.0/255.0)\n"
+        return "public let backgroundColor = UIColor(red: 0.784314, green: 0.588235, blue: 0.0, alpha: 1.0)\n"
     }
     
     func numberValue() -> SwashValue {
