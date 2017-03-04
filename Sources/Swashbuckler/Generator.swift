@@ -45,6 +45,19 @@ extension SwashValue {
         case .rect(id: let id, x: let x, y: let y, width: let width, height: let height):
             templateName = "value_rect"
             data = [ "id": id, "x": x, "y": y, "width": width, "height": height ]
+        case .idBlock(id: let id, values: let values):
+            templateName = "value_idBlock"
+            data = [ "id": id,
+                     "symbolId": id.uppercasedFirstLetter(),
+                     "properties": values.map { $0.toString(for: type) }.joined() ]
+        case .classBlock(id: let id, values: let values):
+            templateName = "value_classBlock"
+            data = [ "id": id,
+                     "symbolId": id.uppercasedFirstLetter(),
+                     "properties": values.map { $0.toString(for: type) }.joined() ]
+        case .root(value: let values):
+            templateName = "root"
+            data = [ "data": values.map { $0.toString(for: type) }.joined() ]
         default:
             break
         }

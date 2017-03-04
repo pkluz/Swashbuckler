@@ -14,13 +14,14 @@ import FootlessParser
 class GeneratorTests: XCTestCase {
 
     func testStyleStructGeneration() {
-//        let input = referencedStyle()
-//        let preprocessedInput = Preprocessor.run(input: input)
-//        let parser = Parser.rootParser
-//        let ast = try! parse(parser, preprocessedInput)
-//        
-//        let generatedOutput = Generator.generate(input: ast)
-        XCTAssert(true)
+        let input = referencedStyle()
+        let preprocessedInput = Preprocessor.run(input: input)
+        let parser = Parser.rootParser
+        let ast = try! parse(parser, preprocessedInput)
+        let resolvedAst = Resolver.run(input: ast)
+        let output = Generator.generate(input: resolvedAst)
+        
+        XCTAssert(output.characters.count > 0)
     }
     
     func testFontGeneration() {
@@ -57,6 +58,18 @@ class GeneratorTests: XCTestCase {
         let input = rectValue()
         let output = Generator.generate(input: input)
         XCTAssert(output == rectString())
+    }
+    
+    func testIdBlockGeneration() {
+        let input = idValue()
+        let output = Generator.generate(input: input)
+        XCTAssert(output == idString())
+    }
+    
+    func testClassBlockGeneration() {
+        let input = classValue()
+        let output = Generator.generate(input: input)
+        XCTAssert(output == classString())
     }
     
     func referencedStyle() -> String {
@@ -109,6 +122,22 @@ class GeneratorTests: XCTestCase {
     
     func rectString() -> String {
         return "public let preferredFrame = CGRect(x: 20.0, y: 20.0, width: 320.0, height: 200.0)\n"
+    }
+    
+    func idValue() -> SwashValue {
+        return SwashValue.idBlock(id: "tableViewController", values: [ sizeValue(), boolValue() ])
+    }
+    
+    func idString() -> String {
+        return "\npublic let tableViewControllerStyle = TableViewControllerStyle()\n\npublic struct TableViewControllerStyle {\npublic let viewportSize = CGSize(width: 320.0, height: 200.0)\npublic let isTranslucent = true\n\n}\n"
+    }
+    
+    func classValue() -> SwashValue {
+        return SwashValue.classBlock(id: "contactsViewController", values: [ sizeValue(), boolValue(), idValue() ])
+    }
+
+    func classString() -> String {
+        return "public struct ContactsViewControllerStyle {\npublic let viewportSize = CGSize(width: 320.0, height: 200.0)\npublic let isTranslucent = true\n\npublic let tableViewControllerStyle = TableViewControllerStyle()\n\npublic struct TableViewControllerStyle {\npublic let viewportSize = CGSize(width: 320.0, height: 200.0)\npublic let isTranslucent = true\n\n}\n\n}\n\nextension ContactsViewController {\n    public var style: ContactsViewControllerStyle {\n        return ContactsViewControllerStyle()\n    }\n}\n"
     }
     
     static func style(named name: String) -> String {

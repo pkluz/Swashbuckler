@@ -26,6 +26,11 @@
 		F961EC851E6A8A5F0042ED4F /* swift3_0_value_color.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F961EC841E6A8A5F0042ED4F /* swift3_0_value_color.mustache */; };
 		F961EC871E6A8C790042ED4F /* swift3_0_value_size.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F961EC861E6A8C790042ED4F /* swift3_0_value_size.mustache */; };
 		F961EC891E6A8C960042ED4F /* swift3_0_value_rect.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F961EC881E6A8C960042ED4F /* swift3_0_value_rect.mustache */; };
+		F961EC8B1E6A91CF0042ED4F /* swift3_0_value_idBlock.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F961EC8A1E6A91CF0042ED4F /* swift3_0_value_idBlock.mustache */; };
+		F961EC8D1E6A92690042ED4F /* String+Uppercase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961EC8C1E6A92690042ED4F /* String+Uppercase.swift */; };
+		F961EC8F1E6AA1700042ED4F /* swift3_0_value_classBlock.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F961EC8E1E6AA1700042ED4F /* swift3_0_value_classBlock.mustache */; };
+		F961EC931E6B00B20042ED4F /* swift3_0_root.mustache in Resources */ = {isa = PBXBuildFile; fileRef = F961EC921E6B00B20042ED4F /* swift3_0_root.mustache */; };
+		F961EC961E6B05190042ED4F /* ResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F961EC941E6B04C90042ED4F /* ResolverTests.swift */; };
 		F96644E31E5BB370007E22D0 /* NestedStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E01E5BB370007E22D0 /* NestedStyle.swash */; };
 		F96644E41E5BB370007E22D0 /* ReferencedStyle.swash in Resources */ = {isa = PBXBuildFile; fileRef = F96644E11E5BB370007E22D0 /* ReferencedStyle.swash */; };
 		F97724121E5ADAAA00528180 /* Swashbuckler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97724081E5ADAAA00528180 /* Swashbuckler.framework */; };
@@ -80,6 +85,11 @@
 		F961EC841E6A8A5F0042ED4F /* swift3_0_value_color.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = swift3_0_value_color.mustache; path = Templates/swift3_0_value_color.mustache; sourceTree = "<group>"; };
 		F961EC861E6A8C790042ED4F /* swift3_0_value_size.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = swift3_0_value_size.mustache; path = Templates/swift3_0_value_size.mustache; sourceTree = "<group>"; };
 		F961EC881E6A8C960042ED4F /* swift3_0_value_rect.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = swift3_0_value_rect.mustache; path = Templates/swift3_0_value_rect.mustache; sourceTree = "<group>"; };
+		F961EC8A1E6A91CF0042ED4F /* swift3_0_value_idBlock.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = swift3_0_value_idBlock.mustache; path = Templates/swift3_0_value_idBlock.mustache; sourceTree = "<group>"; };
+		F961EC8C1E6A92690042ED4F /* String+Uppercase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Uppercase.swift"; sourceTree = "<group>"; };
+		F961EC8E1E6AA1700042ED4F /* swift3_0_value_classBlock.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = swift3_0_value_classBlock.mustache; path = Templates/swift3_0_value_classBlock.mustache; sourceTree = "<group>"; };
+		F961EC921E6B00B20042ED4F /* swift3_0_root.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = swift3_0_root.mustache; path = Templates/swift3_0_root.mustache; sourceTree = "<group>"; };
+		F961EC941E6B04C90042ED4F /* ResolverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResolverTests.swift; path = Tests/ResolverTests.swift; sourceTree = SOURCE_ROOT; };
 		F96644E01E5BB370007E22D0 /* NestedStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NestedStyle.swash; sourceTree = "<group>"; };
 		F96644E11E5BB370007E22D0 /* ReferencedStyle.swash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReferencedStyle.swash; sourceTree = "<group>"; };
 		F97724081E5ADAAA00528180 /* Swashbuckler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swashbuckler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +210,7 @@
 				F9A6BAA51E60BC1600907425 /* ColorParserTests.swift */,
 				F90DDF131E61772900929D0F /* BoolParserTests.swift */,
 				F97724271E5ADAE900528180 /* FootlessParserExtensionTests.swift */,
+				F961EC941E6B04C90042ED4F /* ResolverTests.swift */,
 				F9E3ED321E67BF54003CFEBF /* GeneratorTests.swift */,
 				F97724221E5ADAE900528180 /* Data */,
 				F97724251E5ADAE900528180 /* Supporting Files */,
@@ -248,6 +259,7 @@
 				F9DDFE2D1E616CA900369260 /* FootlessParser+Identifiers.swift */,
 				F90DDF1C1E61874D00929D0F /* FootlessParser+Rects.swift */,
 				F9E3ED341E67C10C003CFEBF /* Bundle+Framework.swift */,
+				F961EC8C1E6A92690042ED4F /* String+Uppercase.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -255,11 +267,14 @@
 		F9E3ED2B1E67BD37003CFEBF /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				F961EC921E6B00B20042ED4F /* swift3_0_root.mustache */,
 				F961EC841E6A8A5F0042ED4F /* swift3_0_value_color.mustache */,
 				F961EC7E1E6A88CD0042ED4F /* swift3_0_value_font.mustache */,
 				F961EC821E6A89D30042ED4F /* swift3_0_value_key.mustache */,
 				F961EC861E6A8C790042ED4F /* swift3_0_value_size.mustache */,
 				F961EC881E6A8C960042ED4F /* swift3_0_value_rect.mustache */,
+				F961EC8A1E6A91CF0042ED4F /* swift3_0_value_idBlock.mustache */,
+				F961EC8E1E6AA1700042ED4F /* swift3_0_value_classBlock.mustache */,
 			);
 			name = Templates;
 			sourceTree = "<group>";
@@ -366,11 +381,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F961EC931E6B00B20042ED4F /* swift3_0_root.mustache in Resources */,
 				F961EC851E6A8A5F0042ED4F /* swift3_0_value_color.mustache in Resources */,
 				F961EC871E6A8C790042ED4F /* swift3_0_value_size.mustache in Resources */,
 				F961EC831E6A89D30042ED4F /* swift3_0_value_key.mustache in Resources */,
+				F961EC8B1E6A91CF0042ED4F /* swift3_0_value_idBlock.mustache in Resources */,
 				F961EC801E6A88CD0042ED4F /* swift3_0_value_font.mustache in Resources */,
 				F961EC891E6A8C960042ED4F /* swift3_0_value_rect.mustache in Resources */,
+				F961EC8F1E6AA1700042ED4F /* swift3_0_value_classBlock.mustache in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +498,7 @@
 				F90DDF1D1E61874D00929D0F /* FootlessParser+Rects.swift in Sources */,
 				F9E3ED2F1E67BD76003CFEBF /* Generator.swift in Sources */,
 				F9DDFE301E616E3D00369260 /* FootlessParser+Fonts.swift in Sources */,
+				F961EC8D1E6A92690042ED4F /* String+Uppercase.swift in Sources */,
 				F9E3ED351E67C10C003CFEBF /* Bundle+Framework.swift in Sources */,
 				F90DDF181E617A1B00929D0F /* FootlessParser+Sizes.swift in Sources */,
 				F9DDFE2E1E616CA900369260 /* FootlessParser+Identifiers.swift in Sources */,
@@ -498,6 +517,7 @@
 				F90DDF231E619EAD00929D0F /* PreprocessorTests.swift in Sources */,
 				F977242B1E5ADAE900528180 /* FootlessParserExtensionTests.swift in Sources */,
 				F90DDF141E61772900929D0F /* BoolParserTests.swift in Sources */,
+				F961EC961E6B05190042ED4F /* ResolverTests.swift in Sources */,
 				F9A6BAA71E60BF5000907425 /* ColorParserTests.swift in Sources */,
 				F9E3ED331E67BF54003CFEBF /* GeneratorTests.swift in Sources */,
 				F90DDF1F1E61898000929D0F /* RectParserTests.swift in Sources */,

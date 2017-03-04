@@ -10,8 +10,14 @@ import Foundation
 import Result
 
 internal struct Resolver {
+    
+    internal static func run(input: SwashValue) -> SwashValue {
+        let namespace = Resolver.leafs(for: input, keypath: [], current: [:])
+        let resolved = Resolver.resolve(value: input, keypath: [], globalNamespace: namespace)
+        return resolved
+    }
   
-    internal static func resolve(value: SwashValue, keypath: [String], globalNamespace namespace: [String: SwashValue]) -> SwashValue {
+    internal static func resolve(value: SwashValue, keypath: [String] = [], globalNamespace namespace: [String: SwashValue] = [:]) -> SwashValue {
         switch value {
         case .font(_),
              .color(_),
