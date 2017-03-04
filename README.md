@@ -28,14 +28,8 @@ The above swashbuckler stylesheet will emit the following Swift code on iOS:
 
 ```swift
 public struct FeedViewControllerStyle {
-
-    public var backgroundColor: UIColor {
-        return UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
-    }
-
-    public var defaultFont: UIFont {
-        return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
-    }
+    public let backgroundColor = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
+    public let defaultFont = UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
 }
 
 extension FeedViewController {
@@ -71,17 +65,9 @@ public struct FeedViewControllerStyle {
         }
     }
 
-    public var headerViewStyle: HeaderViewStyle {
-        return HeaderViewStyle()
-    }
-
-    public var backgroundColor: UIColor {
-        return UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
-    }
-
-    public var defaultFont: UIFont {
-        return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
-    }
+    public let headerViewStyle = HeaderViewStyle()
+    public let backgroundColor = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
+    public let defaultFont = UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
 }
 
 extension FeedViewController {
@@ -111,26 +97,13 @@ The above swashbuckler stylesheet will emit the following Swift code on iOS:
 public struct FeedViewControllerStyle {
 
     public struct HeaderViewStyle {
-        public var isTranslucent: Bool {
-            return true
-        }
-
-        public var titleFont: UIFont {
-            return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
-        }
+        public let isTranslucent = true
+        public let titleFont = UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
     }
 
-    public var headerViewStyle: HeaderViewStyle {
-        return HeaderViewStyle()
-	}
-
-    public var backgroundColor: UIColor {
-        return UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
-    }
-
-    public var defaultFont: UIFont {
-        return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
-    }
+    public let headerViewStyle = HeaderViewStyle()
+    public let backgroundColor = UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 204.0/255.0, alpha: 255.0/255.0)
+    public let defaultFont: = UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
 }
 
 extension FeedViewController {
