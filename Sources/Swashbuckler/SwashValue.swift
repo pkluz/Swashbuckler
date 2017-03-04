@@ -90,3 +90,31 @@ public indirect enum SwashValue {
         }
     }
 }
+
+extension SwashValue {
+    
+    func toDictionary() -> Any {
+        switch self {
+        case .root(let values):
+            return values.map { $0.toDictionary() }
+        case .classBlock(let id, let values):
+            return [ "classes": [ id: values.map { $0.toDictionary() } ] ]
+        case .idBlock(let id, let values):
+            return [ "ids": [ id: values.map { $0.toDictionary() } ] ]
+        case .font(let id, let size, let family):
+            return [ id: [ "size": size, "family": family ] ]
+        case .color(let id, let red, let green, let blue, let alpha):
+            return [ id: [ "red": red, "green": green, "blue": blue, "alpha": alpha ] ]
+        case .bool(let id, let value):
+            return [ id: value ]
+        case .number(let id, let value):
+            return [ id: value ]
+        case .size(let id, let width, let height):
+            return [ id: [ "width": width, "height": height ] ]
+        case .rect(let id, let x, let y, let width, let height):
+            return [ id: [ "x": x, "y": y, "width": width, "height": height ] ]
+        case .reference(let id, let referencedId):
+            return [ id: "@\(referencedId)" ]
+        }
+    }
+}

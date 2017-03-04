@@ -115,7 +115,7 @@ public struct FeedViewControllerStyle {
             return true
         }
 
-        public var titleFont: Bool {
+        public var titleFont: UIFont {
             return UIFont(name: "Helvetica-Neue", size: 12.0)! // swiftlint:disable:this force_unwrap
         }
     }

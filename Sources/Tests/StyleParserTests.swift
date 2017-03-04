@@ -14,63 +14,72 @@ class StyleParserTests: XCTestCase {
     
     func testSimpleStyle() {
         let input = simpleStyle()
-        let preprocessedInput = Preprocessor.run(input: input)
-        let parser = Parser.rootParser
-        let output = try! parse(parser, preprocessedInput)
+        let output = Swashbuckler.run(input: input)
         
         switch output {
-        case .root(value: let values):
-            XCTAssert(values.count == 1)
-            switch values.first! {
-            case .classBlock(id: let id, values: let values):
-                XCTAssert(id == "feedViewController")
-                XCTAssert(values.count == 2)
+        case .success(let value):
+            switch value {
+            case .root(value: let values):
+                XCTAssert(values.count == 1)
+                switch values.first! {
+                case .classBlock(id: let id, values: let values):
+                    XCTAssert(id == "feedViewController")
+                    XCTAssert(values.count == 2)
+                default:
+                    XCTAssert(false)
+                }
             default:
                 XCTAssert(false)
             }
-        default:
+        case .failure(_):
             XCTAssert(false)
         }
     }
     
     func testNestedStyle() {
         let input = nestedStyle()
-        let preprocessedInput = Preprocessor.run(input: input)
-        let parser = Parser.rootParser
-        let output = try! parse(parser, preprocessedInput)
+        let output = Swashbuckler.run(input: input)
         
         switch output {
-        case .root(value: let values):
-            XCTAssert(values.count == 1)
-            switch values.first! {
-            case .classBlock(id: let id, values: let values):
-                XCTAssert(id == "feedViewController")
-                XCTAssert(values.count == 3)
+        case .success(let value):
+            switch value {
+            case .root(value: let values):
+                XCTAssert(values.count == 1)
+                switch values.first! {
+                case .classBlock(id: let id, values: let values):
+                    XCTAssert(id == "feedViewController")
+                    XCTAssert(values.count == 3)
+                default:
+                    XCTAssert(false)
+                }
             default:
                 XCTAssert(false)
             }
-        default:
+        case .failure(_):
             XCTAssert(false)
         }
     }
     
     func testReferencedStyle() {
         let input = referencedStyle()
-        let preprocessedInput = Preprocessor.run(input: input)
-        let parser = Parser.rootParser
-        let output = try! parse(parser, preprocessedInput)
+        let output = Swashbuckler.run(input: input)
         
         switch output {
-        case .root(value: let values):
-            XCTAssert(values.count == 1)
-            switch values.first! {
-            case .classBlock(id: let id, values: let values):
-                XCTAssert(id == "feedViewController")
-                XCTAssert(values.count == 3)
+        case .success(let value):
+            switch value {
+            case .root(value: let values):
+                XCTAssert(values.count == 1)
+                switch values.first! {
+                case .classBlock(id: let id, values: let values):
+                    XCTAssert(id == "feedViewController")
+                    XCTAssert(values.count == 3)
+                default:
+                    XCTAssert(false)
+                }
             default:
                 XCTAssert(false)
             }
-        default:
+        case .failure(_):
             XCTAssert(false)
         }
     }

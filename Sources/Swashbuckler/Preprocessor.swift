@@ -20,7 +20,6 @@ internal struct Preprocessor {
                           .components(separatedBy: "\n")
                           .filter { !$0.isEmpty }
         let processed = [ openingDelimiter ] + insertDelimiters(lines: lines, stack: [0])
-        
         return processed.map { $0.trimmingCharacters(in: CharacterSet.whitespaces) }
                         .joined(separator: "\n")
     }
