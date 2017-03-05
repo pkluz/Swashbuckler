@@ -11,8 +11,8 @@ import Mustache
 
 internal struct Generator {
     
-    internal static func generate(input: SwashValue) -> String {
-        return input.toString(for: .swift3_0)
+    internal static func generate(input: SwashValue, platform: TemplateType = .swift3_0) -> String {
+        return input.toString(for: platform)
     }
 }
 

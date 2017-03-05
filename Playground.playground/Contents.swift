@@ -1,13 +1,22 @@
 import Foundation
+import FootlessParser
 @testable import Swashbuckler
 import Result
 
-let input = "isTranslucent false\n.feedViewController\n    backgroundColor #FF00CC\n    defaultFont 12pt \'Helvetica-Neue\'\n\n    #headerView\n        isTranslucent true\n        titleFont @defaultFont\n\n        #subheaderView\n            isOpaque true\n            subtitleFont @defaultFont\n"
-let root = Swashbuckler.run(input: input).value!
-root
+// Input Style Sheet File.
+let input = ".feedViewController\n    backgroundColor #FF00CC\n    defaultFont 12pt 'Helvetica-Neue'\n\n    #headerView\n        isTranslucent true\n        titleFont @defaultFont"
 
-let result = Resolver.leafs(for: root, keypath: [], current: [:])
-result
+// 1. Preprocess
+let preprocessedInput = Preprocessor.run(input: input)
 
-let resolved = Resolver.resolve(value: root, keypath: [], globalNamespace: result)
-print(resolved)
+// 2. Parse
+let parser = Parser.rootParser
+let ast = try! parse(parser, preprocessedInput)
+
+// 3. Resolve
+let resolvedAst = Resolver.run(input: ast)
+
+// 4. Generate Code
+let output = Generator.generate(input: resolvedAst, platform: .swift3_0)
+
+// print(output)
